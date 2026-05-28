@@ -272,7 +272,7 @@ MEDIUM_TESTS: list[dict] = [
             "PERSON": ["Nadia Kovač", "Daniel 吳承翰", "Sophie Müller"],
             "EMAIL": ["sophie.mueller@web.de"],
             "DATE": ["2026-04-28"],
-            "SECRET": ["whsec_Kp3mNvQ7rLxT2bWfYcJdZeOs"],
+            "SECRET": ["whsec_EXAMPLE_Kp3mNvQ7rLxT2bWfYcJdZeOs"],
         },
     },
     {
