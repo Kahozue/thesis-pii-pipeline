@@ -1,0 +1,38 @@
+{
+  "opf_model": {
+    "micro_f1": 0.7143,
+    "per_type": {
+      "PERSON":  {"precision": 0.6364, "recall": 0.7000, "f1": 0.6667},
+      "EMAIL":   {"precision": 0.9412, "recall": 0.8889, "f1": 0.9143},
+      "PHONE":   {"precision": 0.9167, "recall": 1.0000, "f1": 0.9565},
+      "ADDRESS": {"precision": 0.3750, "recall": 0.5000, "f1": 0.4286},
+      "URL":     {"precision": 1.0000, "recall": 1.0000, "f1": 1.0000},
+      "DATE":    {"precision": 0.6923, "recall": 0.5625, "f1": 0.6207},
+      "ACCOUNT": {"precision": 0.7273, "recall": 0.5000, "f1": 0.5926},
+      "SECRET":  {"precision": 0.7500, "recall": 0.6667, "f1": 0.7059}
+    }
+  },
+  "regex_baseline": {
+    "micro_f1": 0.5802,
+    "per_type": {
+      "PERSON":  {"precision": 0.0000, "recall": 0.0000, "f1": 0.0000},
+      "EMAIL":   {"precision": 1.0000, "recall": 1.0000, "f1": 1.0000},
+      "PHONE":   {"precision": 0.8750, "recall": 0.6364, "f1": 0.7368},
+      "ADDRESS": {"precision": 0.2500, "recall": 0.1667, "f1": 0.2000},
+      "URL":     {"precision": 1.0000, "recall": 1.0000, "f1": 1.0000},
+      "DATE":    {"precision": 0.8462, "recall": 0.6875, "f1": 0.7586},
+      "ACCOUNT": {"precision": 0.8889, "recall": 0.5000, "f1": 0.6400},
+      "SECRET":  {"precision": 0.5000, "recall": 0.1111, "f1": 0.1818}
+    }
+  },
+  "opf_advantage": {
+    "PERSON":  "+66.67pp (regex 完全無法處理姓名)",
+    "ADDRESS": "+22.86pp",
+    "SECRET":  "+52.41pp",
+    "PHONE":   "+21.97pp"
+  },
+  "regex_advantage": {
+    "DATE": "+13.79pp (結構化格式 regex 更精確)",
+    "ACCOUNT": "+4.74pp"
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "title": "PII Pipeline API 並發效能基準測試摘要",
+  "generated_at": "2026-05-05 10:43:17",
+  "test_environment": {
+    "server_port": 8505,
+    "single_text_configs": [
+      {
+        "workers": 1,
+        "num_requests": 10
+      },
+      {
+        "workers": 1,
+        "num_requests": 20
+      },
+      {
+        "workers": 2,
+        "num_requests": 10
+      },
+      {
+        "workers": 2,
+        "num_requests": 20
+      },
+      {
+        "workers": 4,
+        "num_requests": 10
+      },
+      {
+        "workers": 4,
+        "num_requests": 20
+      },
+      {
+        "workers": 8,
+        "num_requests": 10
+      },
+      {
+        "workers": 8,
+        "num_requests": 20
+      }
+    ],
+    "batch_configs": [
+      {
+        "workers": 1,
+        "num_requests": 10,
+        "batch_size": 1
+      },
+      {
+        "workers": 1,
+        "num_requests": 10,
+        "batch_size": 5
+      },
+      {
+        "workers": 1,
+        "num_requests": 10,
+        "batch_size": 10
+      },
+      {
+        "workers": 2,
+        "num_requests": 10,
+        "batch_size": 1
+      },
+      {
+        "workers": 2,
+        "num_requests": 10,
+        "batch_size": 5
+      },
+      {
+        "workers": 2,
+        "num_requests": 10,
+        "batch_size": 10
+      },
+      {
+        "workers": 4,
+        "num_requests": 10,
+        "batch_size": 1
+      },
+      {
+        "workers": 4,
+        "num_requests": 10,
+        "batch_size": 5
+      },
+      {
+        "workers": 4,
+        "num_requests": 10,
+        "batch_size": 10
+      },
+      {
+        "workers": 8,
+        "num_requests": 10,
+        "batch_size": 1
+      },
+      {
+        "workers": 8,
+        "num_requests": 10,
+        "batch_size": 5
+      },
+      {
+        "workers": 8,
+        "num_requests": 10,
+        "batch_size": 10
+      }
+    ],
+    "text_pool_lengths": {
+      "short_cn": 64,
+      "short_en": 99,
+      "medium_teams": 364,
+      "long_text": 1775
+    }
+  },
+  "single_text": {
+    "full_table": [
+      {
+        "workers": 1,
+        "num_requests": 10,
+        "wall_time_s": 50.054,
+        "qps": 0.2,
+        "success_rate": 1.0,
+        "avg_latency_ms": 5005.3,
+        "p50_latency_ms": 2265.2,
+        "p95_latency_ms": 17192.2,
+        "p99_latency_ms": 17202.7,
+        "min_latency_ms": 608.9,
+        "max_latency_ms": 17205.3
+      },
+      {
+        "workers": 1,
+        "num_requests": 20,
+        "wall_time_s": 111.709,
+        "qps": 0.18,
+        "success_rate": 1.0,
+        "avg_latency_ms": 5585.4,
+        "p50_latency_ms": 2252.3,
+        "p95_latency_ms": 17166.2,
+        "p99_latency_ms": 17171.0,
+        "min_latency_ms": 608.9,
+        "max_latency_ms": 17172.2
+      },
+      {
+        "workers": 2,
+        "num_requests": 10,
+        "wall_time_s": 45.763,
+        "qps": 0.22,
+        "success_rate": 1.0,
+        "avg_latency_ms": 9089.9,
+        "p50_latency_ms": 4441.7,
+        "p95_latency_ms": 20911.0,
+        "p99_latency_ms": 20914.4,
+        "min_latency_ms": 694.4,
+        "max_latency_ms": 20915.2
+      },
+      {
+        "workers": 2,
+        "num_requests": 20,
+        "wall_time_s": 112.315,
+        "qps": 0.18,
+        "success_rate": 1.0,
+        "avg_latency_ms": 10378.5,
+        "p50_latency_ms": 4476.0,
+        "p95_latency_ms": 21002.8,
+        "p99_latency_ms": 21054.6,
+        "min_latency_ms": 693.1,
+        "max_latency_ms": 21067.5
+      },
+      {
+        "workers": 4,
+        "num_requests": 10,
+        "wall_time_s": 45.944,
+        "qps": 0.22,
+        "success_rate": 1.0,
+        "avg_latency_ms": 16342.3,
+        "p50_latency_ms": 18138.0,
+        "p95_latency_ms": 22324.1,
+        "p99_latency_ms": 22346.4,
+        "min_latency_ms": 5869.6,
+        "max_latency_ms": 22352.0
+      },
+      {
+        "workers": 4,
+        "num_requests": 20,
+        "wall_time_s": 111.766,
+        "qps": 0.18,
+        "success_rate": 1.0,
+        "avg_latency_ms": 19367.6,
+        "p50_latency_ms": 22216.8,
+        "p95_latency_ms": 22844.5,
+        "p99_latency_ms": 22897.4,
+        "min_latency_ms": 696.4,
+        "max_latency_ms": 22910.7
+      },
+      {
+        "workers": 8,
+        "num_requests": 10,
+        "wall_time_s": 45.879,
+        "qps": 0.22,
+        "success_rate": 1.0,
+        "avg_latency_ms": 21773.7,
+        "p50_latency_ms": 23330.7,
+        "p95_latency_ms": 44573.3,
+        "p99_latency_ms": 44577.7,
+        "min_latency_ms": 711.4,
+        "max_latency_ms": 44578.8
+      },
+      {
+        "workers": 8,
+        "num_requests": 20,
+        "wall_time_s": 111.68,
+        "qps": 0.18,
+        "success_rate": 1.0,
+        "avg_latency_ms": 34198.5,
+        "p50_latency_ms": 40402.0,
+        "p95_latency_ms": 44770.5,
+        "p99_latency_ms": 44787.7,
+        "min_latency_ms": 3815.3,
+        "max_latency_ms": 44792.0
+      }
+    ],
+    "by_workers": [
+      {
+        "workers": 1,
+        "test_count": 2,
+        "avg_qps": 0.19,
+        "avg_latency_ms": 5295.4,
+        "avg_p95_latency_ms": 17179.2
+      },
+      {
+        "workers": 2,
+        "test_count": 2,
+        "avg_qps": 0.2,
+        "avg_latency_ms": 9734.2,
+        "avg_p95_latency_ms": 20956.9
+      },
+      {
+        "workers": 4,
+        "test_count": 2,
+        "avg_qps": 0.2,
+        "avg_latency_ms": 17854.9,
+        "avg_p95_latency_ms": 22584.3
+      },
+      {
+        "workers": 8,
+        "test_count": 2,
+        "avg_qps": 0.2,
+        "avg_latency_ms": 27986.1,
+        "avg_p95_latency_ms": 44671.9
+      }
+    ],
+    "by_num_requests": [
+      {
+        "num_requests": 10,
+        "test_count": 4,
+        "avg_qps": 0.21,
+        "avg_latency_ms": 13052.8,
+        "avg_p95_latency_ms": 26250.2
+      },
+      {
+        "num_requests": 20,
+        "test_count": 4,
+        "avg_qps": 0.18,
+        "avg_latency_ms": 17382.5,
+        "avg_p95_latency_ms": 26446.0
+      }
+    ]
+  },
+  "batch": {
+    "full_table": [
+      {
+        "workers": 1,
+        "num_requests": 10,
+        "batch_size": 1,
+        "wall_time_s": 5.965,
+        "batch_qps": 1.68,
+        "equivalent_text_qps": 1.68,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 596.4,
+        "p50_batch_latency_ms": 609.0,
+        "p95_batch_latency_ms": 727.4,
+        "total_texts_processed": 10
+      },
+      {
+        "workers": 1,
+        "num_requests": 10,
+        "batch_size": 5,
+        "wall_time_s": 30.569,
+        "batch_qps": 0.33,
+        "equivalent_text_qps": 1.64,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 3056.7,
+        "p50_batch_latency_ms": 2946.3,
+        "p95_batch_latency_ms": 3790.9,
+        "total_texts_processed": 50
+      },
+      {
+        "workers": 1,
+        "num_requests": 10,
+        "batch_size": 10,
+        "wall_time_s": 57.964,
+        "batch_qps": 0.17,
+        "equivalent_text_qps": 1.73,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 5796.3,
+        "p50_batch_latency_ms": 5750.8,
+        "p95_batch_latency_ms": 6032.2,
+        "total_texts_processed": 100
+      },
+      {
+        "workers": 2,
+        "num_requests": 10,
+        "batch_size": 1,
+        "wall_time_s": 5.96,
+        "batch_qps": 1.68,
+        "equivalent_text_qps": 1.68,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 1117.2,
+        "p50_batch_latency_ms": 1181.2,
+        "p95_batch_latency_ms": 1313.6,
+        "total_texts_processed": 10
+      },
+      {
+        "workers": 2,
+        "num_requests": 10,
+        "batch_size": 5,
+        "wall_time_s": 28.739,
+        "batch_qps": 0.35,
+        "equivalent_text_qps": 1.74,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 5446.1,
+        "p50_batch_latency_ms": 5721.0,
+        "p95_batch_latency_ms": 5892.5,
+        "total_texts_processed": 50
+      },
+      {
+        "workers": 2,
+        "num_requests": 10,
+        "batch_size": 10,
+        "wall_time_s": 57.723,
+        "batch_qps": 0.17,
+        "equivalent_text_qps": 1.73,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 10970.7,
+        "p50_batch_latency_ms": 11540.7,
+        "p95_batch_latency_ms": 11717.8,
+        "total_texts_processed": 100
+      },
+      {
+        "workers": 4,
+        "num_requests": 10,
+        "batch_size": 1,
+        "wall_time_s": 5.961,
+        "batch_qps": 1.68,
+        "equivalent_text_qps": 1.68,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 2023.4,
+        "p50_batch_latency_ms": 2262.4,
+        "p95_batch_latency_ms": 2564.6,
+        "total_texts_processed": 10
+      },
+      {
+        "workers": 4,
+        "num_requests": 10,
+        "batch_size": 5,
+        "wall_time_s": 28.994,
+        "batch_qps": 0.34,
+        "equivalent_text_qps": 1.72,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 9860.1,
+        "p50_batch_latency_ms": 11432.0,
+        "p95_batch_latency_ms": 11683.1,
+        "total_texts_processed": 50
+      },
+      {
+        "workers": 4,
+        "num_requests": 10,
+        "batch_size": 10,
+        "wall_time_s": 57.559,
+        "batch_qps": 0.17,
+        "equivalent_text_qps": 1.74,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 19590.5,
+        "p50_batch_latency_ms": 23009.3,
+        "p95_batch_latency_ms": 23104.7,
+        "total_texts_processed": 100
+      },
+      {
+        "workers": 8,
+        "num_requests": 10,
+        "batch_size": 1,
+        "wall_time_s": 6.026,
+        "batch_qps": 1.66,
+        "equivalent_text_qps": 1.66,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 3130.7,
+        "p50_batch_latency_ms": 3367.6,
+        "p95_batch_latency_ms": 4829.7,
+        "total_texts_processed": 10
+      },
+      {
+        "workers": 8,
+        "num_requests": 10,
+        "batch_size": 5,
+        "wall_time_s": 29.108,
+        "batch_qps": 0.34,
+        "equivalent_text_qps": 1.72,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 15219.2,
+        "p50_batch_latency_ms": 16262.0,
+        "p95_batch_latency_ms": 23307.4,
+        "total_texts_processed": 50
+      },
+      {
+        "workers": 8,
+        "num_requests": 10,
+        "batch_size": 10,
+        "wall_time_s": 57.673,
+        "batch_qps": 0.17,
+        "equivalent_text_qps": 1.73,
+        "success_rate": 1.0,
+        "avg_batch_latency_ms": 29982.8,
+        "p50_batch_latency_ms": 31624.8,
+        "p95_batch_latency_ms": 46127.3,
+        "total_texts_processed": 100
+      }
+    ],
+    "by_batch_size": [
+      {
+        "batch_size": 1,
+        "test_count": 4,
+        "avg_equivalent_text_qps": 1.67,
+        "avg_batch_latency_ms": 1716.9
+      },
+      {
+        "batch_size": 5,
+        "test_count": 4,
+        "avg_equivalent_text_qps": 1.71,
+        "avg_batch_latency_ms": 8395.5
+      },
+      {
+        "batch_size": 10,
+        "test_count": 4,
+        "avg_equivalent_text_qps": 1.73,
+        "avg_batch_latency_ms": 16585.1
+      }
+    ]
+  }
+}

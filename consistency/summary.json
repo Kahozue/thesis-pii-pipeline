@@ -1,0 +1,137 @@
+{
+  "model": "gpt-4o-mini",
+  "embedding_model": "text-embedding-3-small",
+  "temperature": 0.2,
+  "top_p": 1.0,
+  "max_tokens": 1200,
+  "n_runs_per_sample": 5,
+  "mean_risk_consistency": 1.0,
+  "mean_id_jaccard": 0.8972,
+  "mean_reason_cosine": 0.8564,
+  "mean_anomaly_rate": 0.0,
+  "mean_risk_adjacent_consistency": 1.0,
+  "mean_score_std": 0.0,
+  "mean_score_mae": 0,
+  "samples": [
+    {
+      "sample_id": "A",
+      "source": "mock_dataset (另一 agent 產出)",
+      "n_runs": 5,
+      "majority_risk": "High",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 0.9333,
+      "reason_cosine_mean": 0.8514,
+      "anomaly_rate": 0.0,
+      "risk_adjacent_consistency": 1.0,
+      "score_std": 0.0,
+      "score_mae": 0,
+      "risk_scores": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "sample_id": "B",
+      "source": "mock_dataset (另一 agent 產出)",
+      "n_runs": 5,
+      "majority_risk": "High",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 0.8,
+      "reason_cosine_mean": 0.8317,
+      "anomaly_rate": 0.0,
+      "risk_adjacent_consistency": 1.0,
+      "score_std": 0.0,
+      "score_mae": 0,
+      "risk_scores": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "sample_id": "C",
+      "source": "mock_dataset (另一 agent 產出)",
+      "n_runs": 5,
+      "majority_risk": "High",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 0.85,
+      "reason_cosine_mean": 0.8577,
+      "anomaly_rate": 0.0,
+      "risk_adjacent_consistency": 1.0,
+      "score_std": 0.0,
+      "score_mae": 0,
+      "risk_scores": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "sample_id": "D",
+      "source": "self-made (符合 Graph API Schema,明確標註為自製)",
+      "n_runs": 5,
+      "majority_risk": "High",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 1.0,
+      "reason_cosine_mean": 0.9271,
+      "anomaly_rate": 0.0,
+      "risk_adjacent_consistency": 1.0,
+      "score_std": 0.0,
+      "score_mae": 0,
+      "risk_scores": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "sample_id": "E",
+      "source": "self-made (符合 Graph API Schema,明確標註為自製)",
+      "n_runs": 5,
+      "majority_risk": "High",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 0.8,
+      "reason_cosine_mean": 0.7831,
+      "anomaly_rate": 0.0,
+      "risk_adjacent_consistency": 1.0,
+      "score_std": 0.0,
+      "score_mae": 0,
+      "risk_scores": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "sample_id": "F",
+      "source": "self-made (符合 Graph API Schema,明確標註為自製)",
+      "n_runs": 5,
+      "majority_risk": "Minimal",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 1.0,
+      "reason_cosine_mean": 0.8873,
+      "anomaly_rate": 0.0,
+      "risk_adjacent_consistency": 1.0,
+      "score_std": 0.0,
+      "score_mae": 0,
+      "risk_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

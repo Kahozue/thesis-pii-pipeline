@@ -1,0 +1,10 @@
+[allowlist]
+description = "Synthetic API key strings used as test fixtures in eval_dataset.py — not real credentials"
+paths = [
+  "pii/eval_dataset.py",
+  "pii/app.py",
+  "pii/eval_concurrency.py",
+  "pii/eval_charts/eval_raw.json",
+  "pii/eval_charts_oracle/eval_raw.json",
+  "pii/eval_charts_oracle/eval_charts/eval_raw.json",
+]

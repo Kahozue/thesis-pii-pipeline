@@ -1,0 +1,74 @@
+{
+  "model": "gpt-4o-mini",
+  "embedding_model": "text-embedding-3-small",
+  "temperature": 0.2,
+  "top_p": 1.0,
+  "max_tokens": 1200,
+  "n_runs_per_sample": 5,
+  "mean_risk_consistency": 0.9333,
+  "mean_id_jaccard": 0.9524,
+  "mean_reason_cosine": 0.8548,
+  "mean_anomaly_rate": 0.0667,
+  "samples": [
+    {
+      "sample_id": "A",
+      "source": "mock_dataset (另一 agent 產出)",
+      "n_runs": 5,
+      "majority_risk": "High",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 0.9143,
+      "reason_cosine_mean": 0.8469,
+      "anomaly_rate": 0.0
+    },
+    {
+      "sample_id": "B",
+      "source": "mock_dataset (另一 agent 產出)",
+      "n_runs": 5,
+      "majority_risk": "High",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 1.0,
+      "reason_cosine_mean": 0.8662,
+      "anomaly_rate": 0.0
+    },
+    {
+      "sample_id": "C",
+      "source": "mock_dataset (另一 agent 產出)",
+      "n_runs": 5,
+      "majority_risk": "High",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 1.0,
+      "reason_cosine_mean": 0.8229,
+      "anomaly_rate": 0.0
+    },
+    {
+      "sample_id": "D",
+      "source": "self-made (符合 Graph API Schema,明確標註為自製)",
+      "n_runs": 5,
+      "majority_risk": "High",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 0.8,
+      "reason_cosine_mean": 0.8923,
+      "anomaly_rate": 0.0
+    },
+    {
+      "sample_id": "E",
+      "source": "self-made (符合 Graph API Schema,明確標註為自製)",
+      "n_runs": 5,
+      "majority_risk": "High",
+      "risk_consistency": 0.6,
+      "id_jaccard_mean": 1.0,
+      "reason_cosine_mean": 0.8404,
+      "anomaly_rate": 0.4
+    },
+    {
+      "sample_id": "F",
+      "source": "self-made (符合 Graph API Schema,明確標註為自製)",
+      "n_runs": 5,
+      "majority_risk": "Low",
+      "risk_consistency": 1.0,
+      "id_jaccard_mean": 1.0,
+      "reason_cosine_mean": 0.8602,
+      "anomaly_rate": 0.0
+    }
+  ]
+}

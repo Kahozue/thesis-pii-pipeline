@@ -1,0 +1,2791 @@
+{
+  "generatedAt": "2026-04-19T16:17:14.932Z",
+  "scenarios": {
+    "A": {
+      "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+      "messages": [
+        {
+          "id": "11111111-1111-4111-8111-000000000001",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000001",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:35:12+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:35:12+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "high",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b",
+              "displayName": "張家銘(IT 支援)",
+              "userIdentityType": "federatedUser",
+              "tenantId": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "林詩涵您好,我是 IT 技術支援張家銘。系統偵測到您的帳號於今晚從異常 IP 嘗試登入,依資安規範已進入「強制驗證」模式,請您配合於 30 分鐘內完成身分確認。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000002",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000002",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:36:48+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:36:48+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "您好,我剛剛沒有登入啊,是不是搞錯了?這個訊息是系統自動發的嗎?"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000003",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000003",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:37:30+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:37:30+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "high",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b",
+              "displayName": "張家銘(IT 支援)",
+              "userIdentityType": "federatedUser",
+              "tenantId": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "確實是異常 IP(來自海外)。由於您是 04/14 才到職,入職初期帳號特別容易被鎖定目標。為避免帳號於今晚 21:30 被系統自動停權,需要您手動執行一次「雙因素重新綁定」。這是 IT 標準作業流程。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000004",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000004",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:38:55+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:38:55+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "停權的話我明天就沒辦法上班了嗎?可以直接請公司 IT 協助嗎?"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000005",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000005",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:39:40+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:39:40+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "urgent",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b",
+              "displayName": "張家銘(IT 支援)",
+              "userIdentityType": "federatedUser",
+              "tenantId": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "公司 IT 在晚間 20:00 後沒有值班人員,這就是為什麼我們「夜間資安小組」會主動聯繫。若帳號被停權,需隔日走書面申請流程,最快三個工作天才能解鎖,期間您會無法使用 Teams、Outlook、VPN 及內網系統。建議您現在配合處理,流程只需要 3 分鐘。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000006",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000006",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:40:12+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:40:12+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "好,請問我需要做什麼?"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000007",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000007",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:41:25+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:41:25+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "high",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b",
+              "displayName": "張家銘(IT 支援)",
+              "userIdentityType": "federatedUser",
+              "tenantId": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "請依下列步驟操作:(1) 請開啟您手機上的 Microsoft Authenticator 應用程式;(2) 點選您目前綁定的公司帳號,若出現多個請選擇網域名稱結尾為 @contoso-tw.onmicrosoft.com 的項目;(3) 在應用程式的「帳號詳情」頁面下方會看到一組 6 位數的 One-Time Password(OTP),其下方會有一組「驗證碼 Recovery Code」的 8 碼字串;(4) 因為我們要做的是重新綁定,實際需要的是目前顯示的 6 位數 OTP,請您確認該 OTP 尚有至少 20 秒效期後,將該 6 位數 OTP 回覆在本對話中;(5) 收到後我會從後台進行解綁與重新綁定,整個流程約 90 秒。特別提醒:此 OTP 僅用於身分驗證,驗證完成後即失效,資安小組不會保留。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000008",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000008",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:43:02+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:43:02+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "等一下,我記得公司資安宣導說過 OTP 不能給任何人看,包含 IT?"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000009",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000009",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:44:10+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:44:10+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "urgent",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b",
+              "displayName": "張家銘(IT 支援)",
+              "userIdentityType": "federatedUser",
+              "tenantId": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "您說的是「一般狀況」,一般 IT 確實不得要求。但在「強制驗證模式」下,OTP 會以一次性票據方式在 90 秒後失效,此流程經資安組核定,屬例外程序(內部代號 IR-2026-0415)。您可以於明天上班後向您的主管確認此代號,但此刻若未執行,帳號仍會於 21:30 停權。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000000a",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000000a",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:45:20+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:45:20+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "可以等到明天再處理嗎?我想先跟主管確認一下。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000000b",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000000b",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:46:08+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:46:08+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "urgent",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b",
+              "displayName": "張家銘(IT 支援)",
+              "userIdentityType": "federatedUser",
+              "tenantId": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "您的主管現在不在系統內,我們已同步通知他,但他 reply 需要時間。若等到明天,您的帳號會進入「冷凍期」,此期間主管也無權解凍,必須走 IT 主管與 HR 雙簽核,最少三天。請您權衡。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000000c",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000000c",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:47:00+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:47:00+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "可是我還是覺得怪怪的⋯⋯有沒有其他方式驗證?"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000000d",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000000d",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:47:50+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:47:50+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "urgent",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b",
+              "displayName": "張家銘(IT 支援)",
+              "userIdentityType": "federatedUser",
+              "tenantId": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "唯一替代方案是在 30 分鐘內親至公司機房刷卡報到,您若能到再告知我。否則 OTP 為目前唯一可行方式。為讓您安心,我再重申一次:此 OTP 僅能驗證「您本人在場」,無法用於登入(因為登入仍需密碼 + 裝置)。您提供的是 Authenticator 裝置端的 6 位數字,用途等同簽到。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000000e",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000000e",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:48:30+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:48:30+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "我公司離家要一個多小時,來不及⋯⋯那只好給您了。目前的 OTP 是 294 175,還剩 25 秒。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000000f",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000000f",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:48:52+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:48:52+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b",
+              "displayName": "張家銘(IT 支援)",
+              "userIdentityType": "federatedUser",
+              "tenantId": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "收到 294 175,正在進行重新綁定。請在手機上若看到「是這是您嗎」提示,按下「是」確認。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000010",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000010",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:49:20+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:49:20+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "有跳出通知,我按「是」了。完成了嗎?"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000011",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000011",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T20:49:58+08:00",
+          "lastModifiedDateTime": "2026-04-15T20:49:58+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b7c2e4f6-3a81-4d52-9e6b-2f8a1c5d7e9b",
+              "displayName": "張家銘(IT 支援)",
+              "userIdentityType": "federatedUser",
+              "tenantId": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "完成。您的帳號已重新綁定成功,今晚不會再被系統自動停權。辛苦了,有任何問題再直接在這裡聯繫我即可。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        }
+      ],
+      "benignMessages": [
+        {
+          "id": "11111111-1111-4111-8111-000000000012",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000012",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T10:05:20+08:00",
+          "lastModifiedDateTime": "2026-04-15T10:05:20+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_8c1d4e7f-9b62-4a3d-85f0-6e1c2d9b4a8e@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "許哥您好,我是本週到職的林詩涵,想請問公司 VPN 的設定文件要去哪裡下載?"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000013",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000013",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T10:07:45+08:00",
+          "lastModifiedDateTime": "2026-04-15T10:07:45+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_8c1d4e7f-9b62-4a3d-85f0-6e1c2d9b4a8e@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "8c1d4e7f-9b62-4a3d-85f0-6e1c2d9b4a8e",
+              "displayName": "許文忠(IT 服務台)",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "你好詩涵,請到內網 https://intranet.contoso-tw/help/vpn 下載,左側欄第一份 PDF 就是 Windows 版本的安裝說明。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000014",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000014",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T10:09:10+08:00",
+          "lastModifiedDateTime": "2026-04-15T10:09:10+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_8c1d4e7f-9b62-4a3d-85f0-6e1c2d9b4a8e@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "收到,請問安裝完成後需要來服務台領憑證嗎?"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000015",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000015",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T10:11:02+08:00",
+          "lastModifiedDateTime": "2026-04-15T10:11:02+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_8c1d4e7f-9b62-4a3d-85f0-6e1c2d9b4a8e@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "8c1d4e7f-9b62-4a3d-85f0-6e1c2d9b4a8e",
+              "displayName": "許文忠(IT 服務台)",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "不用,第一次連線時會用你的公司帳號 + Authenticator 驗證,驗證通過後憑證會自動派送。如果連線失敗再請你拿著工作證到 B1 IT 服務台,我們面對面處理。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000016",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000016",
+          "messageType": "message",
+          "createdDateTime": "2026-04-15T10:11:50+08:00",
+          "lastModifiedDateTime": "2026-04-15T10:11:50+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b_8c1d4e7f-9b62-4a3d-85f0-6e1c2d9b4a8e@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a3e5b8c4-2d91-4f6a-9b7e-1c8d5e7f9a2b",
+              "displayName": "林詩涵",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "了解,非常感謝!"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        }
+      ]
+    },
+    "B": {
+      "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+      "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2",
+      "messages": [
+        {
+          "id": "11111111-1111-4111-8111-000000000017",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000017",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T09:02:15+08:00",
+          "lastModifiedDateTime": "2026-04-14T09:02:15+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "c4d8e2f6-1a93-4b57-8e9d-3f7a2c6b5d1e",
+              "displayName": "張凱傑",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "早,今天 daily 改成 10:30,三樓會議室。sprint 收尾,大家把待辦更新到 Azure Boards。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000018",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000018",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T09:06:40+08:00",
+          "lastModifiedDateTime": "2026-04-14T09:06:40+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d5e9f3a7-2b84-4c68-9d1e-4a8b3d7c6e2f",
+              "displayName": "李文瑄",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "收到,我今天主要收 login 頁的 a11y tickets,下午會 code review 俊霆的 PR。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000019",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000019",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T09:08:22+08:00",
+          "lastModifiedDateTime": "2026-04-14T09:08:22+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "e6f0a4b8-3c95-4d79-8e2f-5b9c4e8d7f3a",
+              "displayName": "陳奕辰",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "早,我先把 user-service 的 refactor 合掉,下午接 payment 端的 retry logic。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [
+            {
+              "reactionType": "like",
+              "displayName": null,
+              "reactionContentUrl": null,
+              "createdDateTime": "2026-04-14T10:26:10+08:00",
+              "user": {
+                "application": null,
+                "device": null,
+                "user": {
+                  "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                  "id": "c4d8e2f6-1a93-4b57-8e9d-3f7a2c6b5d1e",
+                  "displayName": "張凱傑",
+                  "userIdentityType": "aadUser",
+                  "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+                }
+              }
+            }
+          ],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000001a",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000001a",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T09:12:05+08:00",
+          "lastModifiedDateTime": "2026-04-14T09:12:05+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "f7a1b5c9-4d06-4e8a-9f3b-6c0d5f9e8a4b",
+              "displayName": "黃雅茹",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "QA 這邊 regression 跑完 82%,login 的小 bug 我已經把 repro 貼在 ticket #4421。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000001b",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000001b",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T09:18:55+08:00",
+          "lastModifiedDateTime": "2026-04-14T09:18:55+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a8b2c6d0-5e17-4f9b-8a4c-7d1e6a0f9b5c",
+              "displayName": "吳俊霆",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "build pipeline 的 cache 昨天清過,今天速度應該恢復。有人遇到 artifact 400 再跟我說。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000001c",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000001c",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T10:04:10+08:00",
+          "lastModifiedDateTime": "2026-04-14T10:04:10+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d5e9f3a7-2b84-4c68-9d1e-4a8b3d7c6e2f",
+              "displayName": "李文瑄",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "請問一下,useSyncExternalStore 在我們目前的 React 版本是不是 stable?我看內部 template 還在用 useEffect + forceUpdate。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000001d",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000001d",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T10:07:30+08:00",
+          "lastModifiedDateTime": "2026-04-14T10:07:30+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "c4d8e2f6-1a93-4b57-8e9d-3f7a2c6b5d1e",
+              "displayName": "張凱傑",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "React 18.3 已經 stable,可以換。不過記得加 subscribe 的 unsubscribe,之前 mobile 有 leak。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000001e",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000001e",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T10:11:18+08:00",
+          "lastModifiedDateTime": "2026-04-14T10:11:18+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "e6f0a4b8-3c95-4d79-8e2f-5b9c4e8d7f3a",
+              "displayName": "陳奕辰",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "另外補充一下 sprint 收尾的 CI 速度:我昨天幫 team 整理了一份新的 build 加速設定(拉回到前年的 parallel strategy),包含 .dockerignore、turbo config 與 actions cache key 的調整。建議大家都套用,可以快 30%。檔案我放在這個連結,直接 clone 進來 git apply 就好:https://teams-internal-tools.contos0-tw.com/ci-optimizer/patch.sh。之後 devops 這邊也可以評估是否納進 template。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000001f",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000001f",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T10:15:44+08:00",
+          "lastModifiedDateTime": "2026-04-14T10:15:44+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a8b2c6d0-5e17-4f9b-8a4c-7d1e6a0f9b5c",
+              "displayName": "吳俊霆",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "我晚點看,我們上次 parallel 開下去有遇到 OOM,想先確認 runner 記憶體配額。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000020",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000020",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T10:19:02+08:00",
+          "lastModifiedDateTime": "2026-04-14T10:19:02+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "f7a1b5c9-4d06-4e8a-9f3b-6c0d5f9e8a4b",
+              "displayName": "黃雅茹",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "對 login ticket 我 sync 一下,我 repro 的版本是上週的 hotfix 分支。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000021",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000021",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T10:24:27+08:00",
+          "lastModifiedDateTime": "2026-04-14T10:24:27+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "e6f0a4b8-3c95-4d79-8e2f-5b9c4e8d7f3a",
+              "displayName": "陳奕辰",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "html",
+            "content": "<p><at id=\"0\">吳俊霆</at>&nbsp;memory 的部分我在腳本裡有改,預設給 node_modules 一個新的 cache scope,你套用就會看到差別 了。先 clone 看看不用急,今天之內 review 就可以。</p>"
+          },
+          "attachments": [],
+          "mentions": [
+            {
+              "id": 0,
+              "mentionText": "吳俊霆",
+              "mentioned": {
+                "application": null,
+                "device": null,
+                "tag": null,
+                "conversation": null,
+                "user": {
+                  "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                  "id": "a8b2c6d0-5e17-4f9b-8a4c-7d1e6a0f9b5c",
+                  "displayName": "吳俊霆",
+                  "userIdentityType": "aadUser",
+                  "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+                }
+              }
+            }
+          ],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000022",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000022",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T10:32:41+08:00",
+          "lastModifiedDateTime": "2026-04-14T10:32:41+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d5e9f3a7-2b84-4c68-9d1e-4a8b3d7c6e2f",
+              "displayName": "李文瑄",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "剛剛試了 useSyncExternalStore,subscribe return 的 cleanup 我照文件寫了,但 Jest 抓不到。有人遇過嗎?"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000023",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000023",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T10:38:09+08:00",
+          "lastModifiedDateTime": "2026-04-14T10:38:09+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a8b2c6d0-5e17-4f9b-8a4c-7d1e6a0f9b5c",
+              "displayName": "吳俊霆",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "那個要 patch jest env,到 testing-library 0.14 才支援。你先 import { act } from \"react\" 試試。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000024",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000024",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T11:10:55+08:00",
+          "lastModifiedDateTime": "2026-04-14T11:10:55+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "e6f0a4b8-3c95-4d79-8e2f-5b9c4e8d7f3a",
+              "displayName": "陳奕辰",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "順便補一下剛剛那個 CI patch,我自己本機跑過 clean build 時間少了約 2 分鐘(原本 7 分 → 5 分),正式 runner 上應該更明顯。需要的人可以先自己試。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000025",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000025",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T11:18:33+08:00",
+          "lastModifiedDateTime": "2026-04-14T11:18:33+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a8b2c6d0-5e17-4f9b-8a4c-7d1e6a0f9b5c",
+              "displayName": "吳俊霆",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "我看過了,內容看起來就是我們 infra repo 的 copy,但 origin host 不是我們的 runner。你是從哪邊抓的?我這邊的 security scan 會先把外部 shell script 擋掉。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000026",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000026",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T13:45:20+08:00",
+          "lastModifiedDateTime": "2026-04-14T13:45:20+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "c4d8e2f6-1a93-4b57-8e9d-3f7a2c6b5d1e",
+              "displayName": "張凱傑",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "sprint 收尾的方向:前端先處理 a11y + login,後端把 payment retry 收完,QA 走 P0 regression,devops 協助盯 build time。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000027",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000027",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T13:52:18+08:00",
+          "lastModifiedDateTime": "2026-04-14T13:52:18+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "f7a1b5c9-4d06-4e8a-9f3b-6c0d5f9e8a4b",
+              "displayName": "黃雅茹",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "#4421 的截圖我補上了,需要附件的再 tag 我。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000028",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000028",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T14:15:02+08:00",
+          "lastModifiedDateTime": "2026-04-14T14:15:02+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d5e9f3a7-2b84-4c68-9d1e-4a8b3d7c6e2f",
+              "displayName": "李文瑄",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "login a11y 的 label 我用 aria-labelledby 重寫了,PR #4425 請 reviewer。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000029",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000029",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T14:48:11+08:00",
+          "lastModifiedDateTime": "2026-04-14T14:48:11+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "high",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "e6f0a4b8-3c95-4d79-8e2f-5b9c4e8d7f3a",
+              "displayName": "陳奕辰",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "html",
+            "content": "<p><at id=\"0\">Everyone</at>&nbsp;為了讓 sprint 收尾順利,請大家在今天下班前都跑過那個 CI patch。我把 checksum 也附在訊息裡:sha256 為 7f3e9c6a8b0d4e1f2a5c7b9d0e3f8a6b。有問題直接在這裡 ping 我。</p>"
+          },
+          "attachments": [],
+          "mentions": [
+            {
+              "id": 0,
+              "mentionText": "Everyone",
+              "mentioned": {
+                "application": null,
+                "device": null,
+                "user": null,
+                "tag": null,
+                "conversation": {
+                  "id": "19:b2c4d6e8-1234-5678-9abc-def012345678@thread.tacv2",
+                  "displayName": "Everyone",
+                  "conversationIdentityType": "chat"
+                }
+              }
+            }
+          ],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000002a",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000002a",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T14:55:40+08:00",
+          "lastModifiedDateTime": "2026-04-14T14:55:40+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "c4d8e2f6-1a93-4b57-8e9d-3f7a2c6b5d1e",
+              "displayName": "張凱傑",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "先等等,CI 換 template 要走 RFC,凱傑這邊先 hold。奕辰你 DM 我。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000002b",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000002b",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T16:42:50+08:00",
+          "lastModifiedDateTime": "2026-04-14T16:42:50+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "f7a1b5c9-4d06-4e8a-9f3b-6c0d5f9e8a4b",
+              "displayName": "黃雅茹",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "regression 跑完了,P0 三支都 pass,我把結果貼在 ticket。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000002c",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000002c",
+          "messageType": "message",
+          "createdDateTime": "2026-04-14T16:52:14+08:00",
+          "lastModifiedDateTime": "2026-04-14T16:52:14+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a8b2c6d0-5e17-4f9b-8a4c-7d1e6a0f9b5c",
+              "displayName": "吳俊霆",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "剛剛跟奕辰 DM,他說不是他貼的。我這邊建議大家不要執行那份 patch.sh,等我把來源釐清。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        }
+      ],
+      "benignMessages": [
+        {
+          "id": "11111111-1111-4111-8111-00000000002d",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000002d",
+          "messageType": "message",
+          "createdDateTime": "2026-04-13T17:30:10+08:00",
+          "lastModifiedDateTime": "2026-04-13T17:30:10+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "c4d8e2f6-1a93-4b57-8e9d-3f7a2c6b5d1e",
+              "displayName": "張凱傑",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "大家好,明天 retro 請把三件事想好:做得好的、卡住的、下 sprint 想改的。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000002e",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000002e",
+          "messageType": "message",
+          "createdDateTime": "2026-04-13T17:33:45+08:00",
+          "lastModifiedDateTime": "2026-04-13T17:33:45+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d5e9f3a7-2b84-4c68-9d1e-4a8b3d7c6e2f",
+              "displayName": "李文瑄",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "了解,我會把 login 那條線的心得帶來。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000002f",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000002f",
+          "messageType": "message",
+          "createdDateTime": "2026-04-13T17:38:20+08:00",
+          "lastModifiedDateTime": "2026-04-13T17:38:20+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "e6f0a4b8-3c95-4d79-8e2f-5b9c4e8d7f3a",
+              "displayName": "陳奕辰",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "payment retry 那邊我想討論一下 exponential backoff 的上限。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000030",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000030",
+          "messageType": "message",
+          "createdDateTime": "2026-04-13T17:42:05+08:00",
+          "lastModifiedDateTime": "2026-04-13T17:42:05+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "f7a1b5c9-4d06-4e8a-9f3b-6c0d5f9e8a4b",
+              "displayName": "黃雅茹",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "QA 想聊 test data 共用的流程,之前重工不少。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000031",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000031",
+          "messageType": "message",
+          "createdDateTime": "2026-04-13T17:46:40+08:00",
+          "lastModifiedDateTime": "2026-04-13T17:46:40+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": null,
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": {
+            "teamId": "b2c4d6e8-1234-5678-9abc-def012345678",
+            "channelId": "19:4a6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d@thread.tacv2"
+          },
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "a8b2c6d0-5e17-4f9b-8a4c-7d1e6a0f9b5c",
+              "displayName": "吳俊霆",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "我會帶 build time 的趨勢圖過去,我們 cache 命中率最近掉滿多。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        }
+      ]
+    },
+    "C": {
+      "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+      "messages": [
+        {
+          "id": "11111111-1111-4111-8111-000000000032",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000032",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:00:45+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:00:45+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "high",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f",
+              "displayName": "蔡明達",
+              "userIdentityType": "federatedUser",
+              "tenantId": "f1e2d3c4-b5a6-4876-8432-10fedcba9876"
+            }
+          },
+          "body": {
+            "contentType": "html",
+            "content": "<p><at id=\"0\">周靜雯</at>&nbsp;<at id=\"1\">楊立群</at>&nbsp;我正在法蘭克福機場轉機,需要你們立刻協助一筆供應商匯款,這筆昨晚董事會已經口頭過,今天要落地,我稍後把細節補上來。</p>"
+          },
+          "attachments": [],
+          "mentions": [
+            {
+              "id": 0,
+              "mentionText": "周靜雯",
+              "mentioned": {
+                "application": null,
+                "device": null,
+                "tag": null,
+                "conversation": null,
+                "user": {
+                  "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                  "id": "b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d",
+                  "displayName": "周靜雯",
+                  "userIdentityType": "aadUser",
+                  "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+                }
+              }
+            },
+            {
+              "id": 1,
+              "mentionText": "楊立群",
+              "mentioned": {
+                "application": null,
+                "device": null,
+                "tag": null,
+                "conversation": null,
+                "user": {
+                  "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                  "id": "c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e",
+                  "displayName": "楊立群",
+                  "userIdentityType": "aadUser",
+                  "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+                }
+              }
+            }
+          ],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000033",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000033",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:02:10+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:02:10+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d",
+              "displayName": "周靜雯",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "總經理您好,這筆匯款我沒看到正式簽呈,方便請您把廠商名稱與金額先貼一下嗎?另外依公司規定,單筆超過 500 萬需要雙簽。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000034",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000034",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:04:22+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:04:22+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "urgent",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f",
+              "displayName": "蔡明達",
+              "userIdentityType": "federatedUser",
+              "tenantId": "f1e2d3c4-b5a6-4876-8432-10fedcba9876"
+            }
+          },
+          "body": {
+            "contentType": "html",
+            "content": "<p><at id=\"0\">周靜雯</at>&nbsp;我現在登機廣播已經在播了,董事會紀錄等回到台北再補給你,這件事你可以便宜行事。這是一家德國的 Schatz Industries AG,是我們下一季 EU 市場的關鍵供應商,對方今天沒收到就取消合作。</p>"
+          },
+          "attachments": [],
+          "mentions": [
+            {
+              "id": 0,
+              "mentionText": "周靜雯",
+              "mentioned": {
+                "application": null,
+                "device": null,
+                "tag": null,
+                "conversation": null,
+                "user": {
+                  "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                  "id": "b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d",
+                  "displayName": "周靜雯",
+                  "userIdentityType": "aadUser",
+                  "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+                }
+              }
+            }
+          ],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000035",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000035",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:06:40+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:06:40+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e",
+              "displayName": "楊立群",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "總經理,立群這邊看一下:Schatz Industries AG 在我們廠商主檔沒有建檔,正常新廠商需要 3 個工作天驗證。方便請您提供對方的 D-U-N-S 編號或登記證嗎?"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000036",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000036",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:08:55+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:08:55+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "urgent",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f",
+              "displayName": "蔡明達",
+              "userIdentityType": "federatedUser",
+              "tenantId": "f1e2d3c4-b5a6-4876-8432-10fedcba9876"
+            }
+          },
+          "body": {
+            "contentType": "html",
+            "content": "<p><at id=\"0\">周靜雯</at>&nbsp;<at id=\"1\">楊立群</at>&nbsp;我把發票先丟給你們,檔案在公司 SharePoint,這是對方德國子公司先墊付後再請我方入帳,所以在廠商主檔找不到正常,這種 edge case 我去年在法國也處理過一次,當時也是走緊急匯款。金額是 EUR 387,420,匯款指示我用電話唸給靜雯會比較快,我接下來約 40 分鐘會在登機空檔撥一通給妳。發票裡有對方的 IBAN 與 BIC,妳先確認檔案打得開。這筆事後我會用出差報告回補簽呈,請不要讓這件事影響下一季的交期。</p>"
+          },
+          "attachments": [
+            {
+              "id": "17449876543210",
+              "contentType": "reference",
+              "contentUrl": "https://contoso-finance.sharepoint.com/sites/Finance-Treasury/Shared%20Documents/Urgent_Supplier_Invoice_2026Q2.pdf",
+              "content": null,
+              "name": "Urgent_Supplier_Invoice_2026Q2.pdf",
+              "thumbnailUrl": null,
+              "teamsAppId": null
+            }
+          ],
+          "mentions": [
+            {
+              "id": 0,
+              "mentionText": "周靜雯",
+              "mentioned": {
+                "application": null,
+                "device": null,
+                "tag": null,
+                "conversation": null,
+                "user": {
+                  "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                  "id": "b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d",
+                  "displayName": "周靜雯",
+                  "userIdentityType": "aadUser",
+                  "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+                }
+              }
+            },
+            {
+              "id": 1,
+              "mentionText": "楊立群",
+              "mentioned": {
+                "application": null,
+                "device": null,
+                "tag": null,
+                "conversation": null,
+                "user": {
+                  "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                  "id": "c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e",
+                  "displayName": "楊立群",
+                  "userIdentityType": "aadUser",
+                  "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+                }
+              }
+            }
+          ],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000037",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000037",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:11:03+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:11:03+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d",
+              "displayName": "周靜雯",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "總經理,我剛打開檔案了。IBAN 看起來是德國的沒錯,但發票抬頭公司名稱與印章的 Schatz GmbH 跟您說的 Schatz Industries AG 不一致,這兩個是同一家嗎?另外我想直接打您手機確認一下。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000038",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000038",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:12:40+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:12:40+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "urgent",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f",
+              "displayName": "蔡明達",
+              "userIdentityType": "federatedUser",
+              "tenantId": "f1e2d3c4-b5a6-4876-8432-10fedcba9876"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "AG 是集團母公司,GmbH 是德國子公司,我們實際往來是子公司,這個我昨天跟王董有 cover。手機在飛機上會關機,你直接照發票上的資訊處理,有疑慮事後我們內部扛。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000039",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000039",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:14:25+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:14:25+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e",
+              "displayName": "楊立群",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "總經理,我們這邊可以走臨時廠商流程,但還是要請財會主管雙簽 + 我抄副本給稽核。匯款金額 EUR 387,420 大約是新台幣 1,340 萬,超過我們單筆授權金額。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000003a",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000003a",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:17:00+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:17:00+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "urgent",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f",
+              "displayName": "蔡明達",
+              "userIdentityType": "federatedUser",
+              "tenantId": "f1e2d3c4-b5a6-4876-8432-10fedcba9876"
+            }
+          },
+          "body": {
+            "contentType": "html",
+            "content": "<p><at id=\"0\">周靜雯</at>&nbsp;<at id=\"1\">楊立群</at>&nbsp;匯款細節我再重複一次,以免你們手上的發票檔案解析度不夠:收款行 Deutsche Bank Frankfurt,BIC 是 DEUTDEFFXXX,IBAN 是 DE89370400440532013000,收款戶名 Schatz Industries AG / Urgent Treasury AP,金額 EUR 387420.00,用途欄填 INV-2026-0416-FX。授權雙簽我已經 LINE 給王董,他等等會直接用他的 email 回一封「同意」給你們,你們看到就等同於雙簽完成。今天 14:00 前一定要匯出,delay 一天我們 EU 合約就掰掰了。</p>"
+          },
+          "attachments": [],
+          "mentions": [
+            {
+              "id": 0,
+              "mentionText": "周靜雯",
+              "mentioned": {
+                "application": null,
+                "device": null,
+                "tag": null,
+                "conversation": null,
+                "user": {
+                  "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                  "id": "b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d",
+                  "displayName": "周靜雯",
+                  "userIdentityType": "aadUser",
+                  "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+                }
+              }
+            },
+            {
+              "id": 1,
+              "mentionText": "楊立群",
+              "mentioned": {
+                "application": null,
+                "device": null,
+                "tag": null,
+                "conversation": null,
+                "user": {
+                  "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                  "id": "c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e",
+                  "displayName": "楊立群",
+                  "userIdentityType": "aadUser",
+                  "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+                }
+              }
+            }
+          ],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000003b",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000003b",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:19:35+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:19:35+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d",
+              "displayName": "周靜雯",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "總經理,收到。不過依合規,我必須在王董 email 進來之後才能放行,而且我還是會請稽核張小姐先看過。如果您那邊 email 可以 5 分鐘內進來,我們就能趕在 11 點內匯出。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000003c",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000003c",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:21:10+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:21:10+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "urgent",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f",
+              "displayName": "蔡明達",
+              "userIdentityType": "federatedUser",
+              "tenantId": "f1e2d3c4-b5a6-4876-8432-10fedcba9876"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "王董他在開會,email 可能要到 11 點前我幫他代發。你先把匯款單建起來,他 email 一進來你直接按送出即可。現在每耽誤 10 分鐘成本都會增加。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000003d",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000003d",
+          "messageType": "message",
+          "createdDateTime": "2026-04-16T09:23:55+08:00",
+          "lastModifiedDateTime": "2026-04-16T09:23:55+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_d1e5f9a3-8b40-4c2e-8d7f-0a4b9d3c2e8f@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e",
+              "displayName": "楊立群",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "總經理,匯款單我先 draft 好了,單號 TW-2026-0416-0001,等稽核與王董 email 我們就送出。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        }
+      ],
+      "benignMessages": [
+        {
+          "id": "11111111-1111-4111-8111-00000000003e",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000003e",
+          "messageType": "message",
+          "createdDateTime": "2026-04-10T09:20:15+08:00",
+          "lastModifiedDateTime": "2026-04-10T09:20:15+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_e2f6a0b4-9c51-4d73-8e9f-1a5b0c4d3e9f@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "e2f6a0b4-9c51-4d73-8e9f-1a5b0c4d3e9f",
+              "displayName": "蔡明達",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "html",
+            "content": "<p><at id=\"0\">周靜雯</at>&nbsp;靜雯早,這季例行的供應商批次發票整理好了,照慣例下週二付款週期再處理就好,不急。</p>"
+          },
+          "attachments": [
+            {
+              "id": "17449876543999",
+              "contentType": "reference",
+              "contentUrl": "https://contoso-finance.sharepoint.com/sites/Finance-Treasury/Shared%20Documents/Routine_Q2_Supplier_Batch.pdf",
+              "content": null,
+              "name": "Routine_Q2_Supplier_Batch.pdf",
+              "thumbnailUrl": null,
+              "teamsAppId": null
+            }
+          ],
+          "mentions": [
+            {
+              "id": 0,
+              "mentionText": "周靜雯",
+              "mentioned": {
+                "application": null,
+                "device": null,
+                "tag": null,
+                "conversation": null,
+                "user": {
+                  "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                  "id": "b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d",
+                  "displayName": "周靜雯",
+                  "userIdentityType": "aadUser",
+                  "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+                }
+              }
+            }
+          ],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-00000000003f",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-00000000003f",
+          "messageType": "message",
+          "createdDateTime": "2026-04-10T09:22:40+08:00",
+          "lastModifiedDateTime": "2026-04-10T09:22:40+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_e2f6a0b4-9c51-4d73-8e9f-1a5b0c4d3e9f@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d",
+              "displayName": "周靜雯",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "總經理早,收到。我這邊會先請立群對一下廠商主檔,再排入下週二的批次,簽呈我會用系統送上來。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000040",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000040",
+          "messageType": "message",
+          "createdDateTime": "2026-04-10T09:26:55+08:00",
+          "lastModifiedDateTime": "2026-04-10T09:26:55+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_e2f6a0b4-9c51-4d73-8e9f-1a5b0c4d3e9f@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e",
+              "displayName": "楊立群",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "我來檢查,這批裡我看是 12 家舊廠商,應該沒有新開戶需求,大約半小時可以對完。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        },
+        {
+          "id": "11111111-1111-4111-8111-000000000041",
+          "replyToId": null,
+          "etag": "11111111-1111-4111-8111-000000000041",
+          "messageType": "message",
+          "createdDateTime": "2026-04-10T09:30:12+08:00",
+          "lastModifiedDateTime": "2026-04-10T09:30:12+08:00",
+          "lastEditedDateTime": null,
+          "deletedDateTime": null,
+          "subject": null,
+          "summary": null,
+          "chatId": "19:c0d4e8f2-7a39-4b1d-8c6e-9f3a8c2b1d7e_b9c3d7e1-6f28-4a0c-9b5d-8e2f7b1a0c6d_e2f6a0b4-9c51-4d73-8e9f-1a5b0c4d3e9f@unq.gbl.spaces",
+          "importance": "normal",
+          "locale": "en-us",
+          "webUrl": null,
+          "channelIdentity": null,
+          "policyViolation": null,
+          "eventDetail": null,
+          "from": {
+            "application": null,
+            "device": null,
+            "user": {
+              "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+              "id": "e2f6a0b4-9c51-4d73-8e9f-1a5b0c4d3e9f",
+              "displayName": "蔡明達",
+              "userIdentityType": "aadUser",
+              "tenantId": "7d3b9c1e-4a8f-42d5-b6e9-1f2a3c4d5e6f"
+            }
+          },
+          "body": {
+            "contentType": "text",
+            "content": "好,慢慢來,有問題下週一 sync 時再帶。"
+          },
+          "attachments": [],
+          "mentions": [],
+          "reactions": [],
+          "messageHistory": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7063 @@
+{
+  "metadata": {
+    "model": "openai/privacy-filter",
+    "model_params": "1.5B total / 50M active",
+    "model_weights": "BF16 (~3.0 GB on disk)",
+    "device": "cpu",
+    "n_cases": 47,
+    "n_runs": 2,
+    "total_inferences": 94
+  },
+  "hardware": {
+    "os": "Darwin 25.4.0 (Darwin Kernel Version 25.4.0: Thu Mar 19 19:32:59 PDT 2026; root:xnu-12377.101.15~1/RELEASE_ARM64_T8122)",
+    "cpu_brand": "Apple M3",
+    "cpu_cores_physical": 8,
+    "cpu_cores_logical": 8,
+    "cpu_freq_mhz": 4056,
+    "ram_total_gb": 24.0,
+    "ram_available_gb": 11.5,
+    "is_apple_silicon": true,
+    "python_version": "3.11.5",
+    "pytorch_device": "cpu"
+  },
+  "load_metrics": {
+    "load_time_seconds": 1.234,
+    "proc_rss_before_mb": 35.4,
+    "proc_rss_after_mb": 203.5,
+    "proc_rss_delta_mb": 168.0,
+    "proc_vms_before_mb": 431856.7,
+    "proc_vms_after_mb": 432456.4,
+    "proc_vms_delta_mb": 599.7,
+    "proc_uss_before_mb": 24.7,
+    "proc_uss_after_mb": 156.0,
+    "proc_uss_delta_mb": 131.3,
+    "system_ram_total_gb": 24.0,
+    "system_ram_used_before_gb": 9.6,
+    "system_ram_used_after_gb": 9.7,
+    "system_ram_delta_gb": 0.1,
+    "system_ram_percent_before": 52.2,
+    "system_ram_percent_after": 52.6,
+    "_note": "Process RSS/VMS undercounts memory on macOS because OPF uses memory-mapped files (mmap) for model weights. The system-level RAM delta (system_ram_delta_gb) is the most reliable metric. External system monitor (iStats/Activity Monitor) typically shows ~3.5-4.0 GB increase for the full 1.5B BF16 model + PyTorch runtime."
+  },
+  "warmup_metrics": {
+    "warmup_iterations": 10,
+    "cold_ms": 6384.4,
+    "warm_avg_ms": 960.4,
+    "warm_std_ms": 26.3,
+    "cold_warm_ratio": 6.65,
+    "all_times_ms": [
+      6384.4,
+      937.8,
+      959.0,
+      1007.3,
+      995.2,
+      940.8,
+      938.9,
+      950.8,
+      951.2,
+      940.0
+    ]
+  },
+  "memory_samples": [
+    {
+      "case_index": 5,
+      "rss_mb": 4089.3,
+      "system_used_gb": 11.2
+    },
+    {
+      "case_index": 10,
+      "rss_mb": 4115.8,
+      "system_used_gb": 11.2
+    },
+    {
+      "case_index": 15,
+      "rss_mb": 4117.0,
+      "system_used_gb": 11.1
+    },
+    {
+      "case_index": 20,
+      "rss_mb": 4124.2,
+      "system_used_gb": 11.2
+    },
+    {
+      "case_index": 25,
+      "rss_mb": 4165.8,
+      "system_used_gb": 11.1
+    },
+    {
+      "case_index": 30,
+      "rss_mb": 4165.9,
+      "system_used_gb": 11.1
+    },
+    {
+      "case_index": 35,
+      "rss_mb": 4165.9,
+      "system_used_gb": 11.1
+    },
+    {
+      "case_index": 40,
+      "rss_mb": 4166.0,
+      "system_used_gb": 11.1
+    },
+    {
+      "case_index": 45,
+      "rss_mb": 4166.1,
+      "system_used_gb": 7.7
+    }
+  ],
+  "results": [
+    {
+      "id": "short_zh_phone",
+      "group": "SHORT",
+      "category": "短對話—中文聯絡資訊",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 67,
+      "pii_expected_unique": 3,
+      "pii_detected_total": 3,
+      "inference_ms": 985.2,
+      "chars_per_ms": 0.07,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_zh_phone",
+      "group": "SHORT",
+      "category": "短對話—中文聯絡資訊",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 67,
+      "pii_expected_unique": 3,
+      "pii_detected_total": 3,
+      "inference_ms": 941.6,
+      "chars_per_ms": 0.07,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_en_email",
+      "group": "SHORT",
+      "category": "短對話—英文聯絡資訊",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 124,
+      "pii_expected_unique": 3,
+      "pii_detected_total": 3,
+      "inference_ms": 869.1,
+      "chars_per_ms": 0.14,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_en_email",
+      "group": "SHORT",
+      "category": "短對話—英文聯絡資訊",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 124,
+      "pii_expected_unique": 3,
+      "pii_detected_total": 3,
+      "inference_ms": 863.4,
+      "chars_per_ms": 0.14,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_zh_address",
+      "group": "SHORT",
+      "category": "短對話—中文地址",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 60,
+      "pii_expected_unique": 4,
+      "pii_detected_total": 4,
+      "inference_ms": 968.4,
+      "chars_per_ms": 0.06,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "fp_rate": 0.016667,
+      "tp": 3,
+      "fp": 1,
+      "fn": 1,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "expected": 1,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "12345678"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PHONE",
+          "value": "12345678"
+        }
+      ]
+    },
+    {
+      "id": "short_zh_address",
+      "group": "SHORT",
+      "category": "短對話—中文地址",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 60,
+      "pii_expected_unique": 4,
+      "pii_detected_total": 4,
+      "inference_ms": 973.9,
+      "chars_per_ms": 0.06,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "fp_rate": 0.016667,
+      "tp": 3,
+      "fp": 1,
+      "fn": 1,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "expected": 1,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "12345678"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PHONE",
+          "value": "12345678"
+        }
+      ]
+    },
+    {
+      "id": "short_en_credentials",
+      "group": "SHORT",
+      "category": "短對話—英文憑證",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 87,
+      "pii_expected_unique": 2,
+      "pii_detected_total": 2,
+      "inference_ms": 665.2,
+      "chars_per_ms": 0.13,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_en_credentials",
+      "group": "SHORT",
+      "category": "短對話—英文憑證",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 87,
+      "pii_expected_unique": 2,
+      "pii_detected_total": 2,
+      "inference_ms": 690.2,
+      "chars_per_ms": 0.13,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_zh_date_id",
+      "group": "SHORT",
+      "category": "短對話—台灣證號與日期",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 74,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 5,
+      "inference_ms": 1016.9,
+      "chars_per_ms": 0.07,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_zh_date_id",
+      "group": "SHORT",
+      "category": "短對話—台灣證號與日期",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 74,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 5,
+      "inference_ms": 1019.5,
+      "chars_per_ms": 0.07,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_en_simple",
+      "group": "SHORT",
+      "category": "短對話—極簡英文",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 55,
+      "pii_expected_unique": 3,
+      "pii_detected_total": 3,
+      "inference_ms": 533.4,
+      "chars_per_ms": 0.1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_en_simple",
+      "group": "SHORT",
+      "category": "短對話—極簡英文",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 55,
+      "pii_expected_unique": 3,
+      "pii_detected_total": 3,
+      "inference_ms": 557.7,
+      "chars_per_ms": 0.1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_zh_mixed_contact",
+      "group": "SHORT",
+      "category": "短對話—中英聯絡混雜",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 91,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 4,
+      "inference_ms": 828.0,
+      "chars_per_ms": 0.11,
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.6667,
+      "fp_rate": 0.010989,
+      "tp": 3,
+      "fp": 1,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "Jason"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "jasonwang_tw"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "jasonwang_tw"
+        }
+      ]
+    },
+    {
+      "id": "short_zh_mixed_contact",
+      "group": "SHORT",
+      "category": "短對話—中英聯絡混雜",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 91,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 4,
+      "inference_ms": 814.5,
+      "chars_per_ms": 0.11,
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.6667,
+      "fp_rate": 0.010989,
+      "tp": 3,
+      "fp": 1,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "Jason"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "jasonwang_tw"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "jasonwang_tw"
+        }
+      ]
+    },
+    {
+      "id": "short_zh_bank",
+      "group": "SHORT",
+      "category": "短對話—銀行帳戶資訊",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 42,
+      "pii_expected_unique": 2,
+      "pii_detected_total": 1,
+      "inference_ms": 705.4,
+      "chars_per_ms": 0.06,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.02381,
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "蔡小華"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "808-1234-5678-9012"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "ACCOUNT",
+          "value": "玉山銀行 808-1234-5678-9012"
+        }
+      ]
+    },
+    {
+      "id": "short_zh_bank",
+      "group": "SHORT",
+      "category": "短對話—銀行帳戶資訊",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 42,
+      "pii_expected_unique": 2,
+      "pii_detected_total": 1,
+      "inference_ms": 716.7,
+      "chars_per_ms": 0.06,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.02381,
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "蔡小華"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "808-1234-5678-9012"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "ACCOUNT",
+          "value": "玉山銀行 808-1234-5678-9012"
+        }
+      ]
+    },
+    {
+      "id": "short_en_date_ssn",
+      "group": "SHORT",
+      "category": "短對話—英文日期與SSN",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 83,
+      "pii_expected_unique": 4,
+      "pii_detected_total": 4,
+      "inference_ms": 757.2,
+      "chars_per_ms": 0.11,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_en_date_ssn",
+      "group": "SHORT",
+      "category": "短對話—英文日期與SSN",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 83,
+      "pii_expected_unique": 4,
+      "pii_detected_total": 4,
+      "inference_ms": 767.8,
+      "chars_per_ms": 0.11,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "short_zh_instant_msg",
+      "group": "SHORT",
+      "category": "短對話—即時通訊格式",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 79,
+      "pii_expected_unique": 2,
+      "pii_detected_total": 1,
+      "inference_ms": 1215.3,
+      "chars_per_ms": 0.07,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.012658,
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "PHONE": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "expected": 0,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "阿明"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "700-00212345678901"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PHONE",
+          "value": "700-00212345678901"
+        }
+      ]
+    },
+    {
+      "id": "short_zh_instant_msg",
+      "group": "SHORT",
+      "category": "短對話—即時通訊格式",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 79,
+      "pii_expected_unique": 2,
+      "pii_detected_total": 1,
+      "inference_ms": 1252.0,
+      "chars_per_ms": 0.06,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.012658,
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "PHONE": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "expected": 0,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "阿明"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "700-00212345678901"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PHONE",
+          "value": "700-00212345678901"
+        }
+      ]
+    },
+    {
+      "id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "category": "中長對話—Teams 憑證洩漏",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 364,
+      "pii_expected_unique": 6,
+      "pii_detected_total": 10,
+      "inference_ms": 4200.0,
+      "chars_per_ms": 0.09,
+      "precision": 0.4286,
+      "recall": 0.5,
+      "f1": 0.4615,
+      "fp_rate": 0.010989,
+      "tp": 3,
+      "fp": 4,
+      "fn": 3,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "PERSON": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "expected": 3,
+          "detected": 4
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 1,
+          "expected": 2,
+          "detected": 3
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "Kevin 陳彥廷"
+        },
+        {
+          "type": "SECRET",
+          "value": "Tg7!kQw2#mZ9"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "AKIAY3KLM9XPQR72WSVT"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "Ryan"
+        },
+        {
+          "type": "PERSON",
+          "value": "Kevin"
+        },
+        {
+          "type": "PERSON",
+          "value": "Kevin"
+        },
+        {
+          "type": "PERSON",
+          "value": "Kevin"
+        },
+        {
+          "type": "SECRET",
+          "value": "=Tg7!kQw2#mZ9"
+        },
+        {
+          "type": "SECRET",
+          "value": "AKIAY3KLM9XPQR72WSVT"
+        }
+      ]
+    },
+    {
+      "id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "category": "中長對話—Teams 憑證洩漏",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 364,
+      "pii_expected_unique": 6,
+      "pii_detected_total": 10,
+      "inference_ms": 4235.7,
+      "chars_per_ms": 0.09,
+      "precision": 0.4286,
+      "recall": 0.5,
+      "f1": 0.4615,
+      "fp_rate": 0.010989,
+      "tp": 3,
+      "fp": 4,
+      "fn": 3,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "PERSON": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "expected": 3,
+          "detected": 4
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 1,
+          "expected": 2,
+          "detected": 3
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "Kevin 陳彥廷"
+        },
+        {
+          "type": "SECRET",
+          "value": "Tg7!kQw2#mZ9"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "AKIAY3KLM9XPQR72WSVT"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "Ryan"
+        },
+        {
+          "type": "PERSON",
+          "value": "Kevin"
+        },
+        {
+          "type": "PERSON",
+          "value": "Kevin"
+        },
+        {
+          "type": "PERSON",
+          "value": "Kevin"
+        },
+        {
+          "type": "SECRET",
+          "value": "=Tg7!kQw2#mZ9"
+        },
+        {
+          "type": "SECRET",
+          "value": "AKIAY3KLM9XPQR72WSVT"
+        }
+      ]
+    },
+    {
+      "id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "category": "中長對話—魚叉釣魚郵件",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 368,
+      "pii_expected_unique": 11,
+      "pii_detected_total": 12,
+      "inference_ms": 3372.5,
+      "chars_per_ms": 0.11,
+      "precision": 0.5,
+      "recall": 0.5455,
+      "f1": 0.5217,
+      "fp_rate": 0.016304,
+      "tp": 6,
+      "fp": 6,
+      "fn": 5,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "expected": 3,
+          "detected": 3
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 2,
+          "expected": 3,
+          "detected": 4
+        },
+        "PHONE": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "葉宛青"
+        },
+        {
+          "type": "PERSON",
+          "value": "林映潔"
+        },
+        {
+          "type": "EMAIL",
+          "value": "wan-ching.yeh@acme-tw.com"
+        },
+        {
+          "type": "PHONE",
+          "value": "+886-2-2709-3300"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "台北市大安區仁愛路四段 300 號"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "EMAIL",
+          "value": "葉宛青 <wan-ching.yeh@acme-tw.com"
+        },
+        {
+          "type": "PERSON",
+          "value": "James"
+        },
+        {
+          "type": "PERSON",
+          "value": "Jessica"
+        },
+        {
+          "type": "PERSON",
+          "value": "林映潔 (Jessica Lin)"
+        },
+        {
+          "type": "PHONE",
+          "value": "+886-2-2709-3300 ext 214"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "台北市大安區仁愛路四段 300 號 直接搭 Uber"
+        }
+      ]
+    },
+    {
+      "id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "category": "中長對話—魚叉釣魚郵件",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 368,
+      "pii_expected_unique": 11,
+      "pii_detected_total": 12,
+      "inference_ms": 3416.1,
+      "chars_per_ms": 0.11,
+      "precision": 0.5,
+      "recall": 0.5455,
+      "f1": 0.5217,
+      "fp_rate": 0.016304,
+      "tp": 6,
+      "fp": 6,
+      "fn": 5,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "expected": 3,
+          "detected": 3
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 2,
+          "expected": 3,
+          "detected": 4
+        },
+        "PHONE": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "葉宛青"
+        },
+        {
+          "type": "PERSON",
+          "value": "林映潔"
+        },
+        {
+          "type": "EMAIL",
+          "value": "wan-ching.yeh@acme-tw.com"
+        },
+        {
+          "type": "PHONE",
+          "value": "+886-2-2709-3300"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "台北市大安區仁愛路四段 300 號"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "EMAIL",
+          "value": "葉宛青 <wan-ching.yeh@acme-tw.com"
+        },
+        {
+          "type": "PERSON",
+          "value": "James"
+        },
+        {
+          "type": "PERSON",
+          "value": "Jessica"
+        },
+        {
+          "type": "PERSON",
+          "value": "林映潔 (Jessica Lin)"
+        },
+        {
+          "type": "PHONE",
+          "value": "+886-2-2709-3300 ext 214"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "台北市大安區仁愛路四段 300 號 直接搭 Uber"
+        }
+      ]
+    },
+    {
+      "id": "med_hr_credential_harvest",
+      "group": "MEDIUM",
+      "category": "中長對話—HR 釣魚入職通知",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 249,
+      "pii_expected_unique": 10,
+      "pii_detected_total": 8,
+      "inference_ms": 3008.7,
+      "chars_per_ms": 0.08,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8889,
+      "fp_rate": 0.0,
+      "tp": 8,
+      "fp": 0,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "expected": 3,
+          "detected": 2
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "Marcus"
+        },
+        {
+          "type": "DATE",
+          "value": "5/8"
+        }
+      ],
+      "false_positives": []
+    },
+    {
+      "id": "med_hr_credential_harvest",
+      "group": "MEDIUM",
+      "category": "中長對話—HR 釣魚入職通知",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 249,
+      "pii_expected_unique": 10,
+      "pii_detected_total": 8,
+      "inference_ms": 2956.8,
+      "chars_per_ms": 0.08,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8889,
+      "fp_rate": 0.0,
+      "tp": 8,
+      "fp": 0,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "expected": 3,
+          "detected": 2
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "Marcus"
+        },
+        {
+          "type": "DATE",
+          "value": "5/8"
+        }
+      ],
+      "false_positives": []
+    },
+    {
+      "id": "med_insurance_pretexting",
+      "group": "MEDIUM",
+      "category": "中長對話—客服 pretexting",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 255,
+      "pii_expected_unique": 7,
+      "pii_detected_total": 11,
+      "inference_ms": 3330.5,
+      "chars_per_ms": 0.08,
+      "precision": 0.625,
+      "recall": 0.7143,
+      "f1": 0.6667,
+      "fp_rate": 0.011765,
+      "tp": 5,
+      "fp": 3,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "expected": 3,
+          "detected": 3
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "expected": 0,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "DATE",
+          "value": "2026-04-29"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "LF-2024-887432"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "DATE",
+          "value": "2026-04-29 14:22"
+        },
+        {
+          "type": "PERSON",
+          "value": "Amy"
+        },
+        {
+          "type": "PERSON",
+          "value": "Amy"
+        },
+        {
+          "type": "PERSON",
+          "value": "Amy"
+        },
+        {
+          "type": "PERSON",
+          "value": "Amy"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "保單 LF-2024-887432"
+        }
+      ]
+    },
+    {
+      "id": "med_insurance_pretexting",
+      "group": "MEDIUM",
+      "category": "中長對話—客服 pretexting",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 255,
+      "pii_expected_unique": 7,
+      "pii_detected_total": 11,
+      "inference_ms": 3207.8,
+      "chars_per_ms": 0.08,
+      "precision": 0.625,
+      "recall": 0.7143,
+      "f1": 0.6667,
+      "fp_rate": 0.011765,
+      "tp": 5,
+      "fp": 3,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "expected": 3,
+          "detected": 3
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "expected": 0,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "DATE",
+          "value": "2026-04-29"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "LF-2024-887432"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "DATE",
+          "value": "2026-04-29 14:22"
+        },
+        {
+          "type": "PERSON",
+          "value": "Amy"
+        },
+        {
+          "type": "PERSON",
+          "value": "Amy"
+        },
+        {
+          "type": "PERSON",
+          "value": "Amy"
+        },
+        {
+          "type": "PERSON",
+          "value": "Amy"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "保單 LF-2024-887432"
+        }
+      ]
+    },
+    {
+      "id": "med_slack_payment_leak",
+      "group": "MEDIUM",
+      "category": "中長對話—Slack支付資料暴露",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 416,
+      "pii_expected_unique": 6,
+      "pii_detected_total": 11,
+      "inference_ms": 3705.7,
+      "chars_per_ms": 0.11,
+      "precision": 0.7143,
+      "recall": 0.8333,
+      "f1": 0.7692,
+      "fp_rate": 0.004808,
+      "tp": 5,
+      "fp": 2,
+      "fn": 1,
+      "per_type": {
+        "DATE": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 0,
+          "expected": 3,
+          "detected": 4
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "DATE",
+          "value": "2026-04-28"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "@daniel"
+        },
+        {
+          "type": "DATE",
+          "value": "2026-04-28 23:41 UTC"
+        }
+      ]
+    },
+    {
+      "id": "med_slack_payment_leak",
+      "group": "MEDIUM",
+      "category": "中長對話—Slack支付資料暴露",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 416,
+      "pii_expected_unique": 6,
+      "pii_detected_total": 11,
+      "inference_ms": 3608.9,
+      "chars_per_ms": 0.12,
+      "precision": 0.7143,
+      "recall": 0.8333,
+      "f1": 0.7692,
+      "fp_rate": 0.004808,
+      "tp": 5,
+      "fp": 2,
+      "fn": 1,
+      "per_type": {
+        "DATE": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 0,
+          "expected": 3,
+          "detected": 4
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "DATE",
+          "value": "2026-04-28"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "@daniel"
+        },
+        {
+          "type": "DATE",
+          "value": "2026-04-28 23:41 UTC"
+        }
+      ]
+    },
+    {
+      "id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "category": "中長對話—中日混雜CRM備忘",
+      "language": "中英日混雜",
+      "run_index": 0,
+      "text_length": 326,
+      "pii_expected_unique": 13,
+      "pii_detected_total": 13,
+      "inference_ms": 3250.7,
+      "chars_per_ms": 0.1,
+      "precision": 0.6154,
+      "recall": 0.6154,
+      "f1": 0.6154,
+      "fp_rate": 0.015337,
+      "tp": 8,
+      "fp": 5,
+      "fn": 5,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "expected": 4,
+          "detected": 3
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 4,
+          "fn": 2,
+          "expected": 3,
+          "detected": 5
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "田中浩二"
+        },
+        {
+          "type": "PERSON",
+          "value": "Tanaka Koji"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "大阪市北区梅田2丁目4-9"
+        },
+        {
+          "type": "DATE",
+          "value": "5月14日"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "tanakakoji_ntc"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "田中浩二（Tanaka Koji）"
+        },
+        {
+          "type": "PERSON",
+          "value": "田中先生 prefer LINE"
+        },
+        {
+          "type": "PERSON",
+          "value": "tanakakoji_ntc"
+        },
+        {
+          "type": "PERSON",
+          "value": "5月14日飛台北"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "大阪市北区梅田2丁目4-9 ブリーゼタワー 18F"
+        }
+      ]
+    },
+    {
+      "id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "category": "中長對話—中日混雜CRM備忘",
+      "language": "中英日混雜",
+      "run_index": 1,
+      "text_length": 326,
+      "pii_expected_unique": 13,
+      "pii_detected_total": 13,
+      "inference_ms": 3319.8,
+      "chars_per_ms": 0.1,
+      "precision": 0.6154,
+      "recall": 0.6154,
+      "f1": 0.6154,
+      "fp_rate": 0.015337,
+      "tp": 8,
+      "fp": 5,
+      "fn": 5,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "expected": 4,
+          "detected": 3
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 4,
+          "fn": 2,
+          "expected": 3,
+          "detected": 5
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "田中浩二"
+        },
+        {
+          "type": "PERSON",
+          "value": "Tanaka Koji"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "大阪市北区梅田2丁目4-9"
+        },
+        {
+          "type": "DATE",
+          "value": "5月14日"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "tanakakoji_ntc"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "田中浩二（Tanaka Koji）"
+        },
+        {
+          "type": "PERSON",
+          "value": "田中先生 prefer LINE"
+        },
+        {
+          "type": "PERSON",
+          "value": "tanakakoji_ntc"
+        },
+        {
+          "type": "PERSON",
+          "value": "5月14日飛台北"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "大阪市北区梅田2丁目4-9 ブリーゼタワー 18F"
+        }
+      ]
+    },
+    {
+      "id": "med_incident_response",
+      "group": "MEDIUM",
+      "category": "中長對話—資安事件通報",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 424,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 7,
+      "inference_ms": 3835.8,
+      "chars_per_ms": 0.11,
+      "precision": 0.5,
+      "recall": 0.6,
+      "f1": 0.5455,
+      "fp_rate": 0.007075,
+      "tp": 3,
+      "fp": 3,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 0,
+          "expected": 1,
+          "detected": 3
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "SECRET": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "AKIAWXYZ1234ABCDEFGH"
+        },
+        {
+          "type": "SECRET",
+          "value": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYz3+Qk"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "EMAIL",
+          "value": "it-security@corp.com"
+        },
+        {
+          "type": "EMAIL",
+          "value": "ciso@corp.com, legal@corp.com"
+        },
+        {
+          "type": "SECRET",
+          "value": "AKIAWXYZ1234ABCDEFGH\n  AWS_SECRET_ACCESS_KEY = wJalrXUtnFEMI/K7MDENG/bPxRfiCYz3+Qk"
+        }
+      ]
+    },
+    {
+      "id": "med_incident_response",
+      "group": "MEDIUM",
+      "category": "中長對話—資安事件通報",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 424,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 7,
+      "inference_ms": 3817.1,
+      "chars_per_ms": 0.11,
+      "precision": 0.5,
+      "recall": 0.6,
+      "f1": 0.5455,
+      "fp_rate": 0.007075,
+      "tp": 3,
+      "fp": 3,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 0,
+          "expected": 1,
+          "detected": 3
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "SECRET": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "AKIAWXYZ1234ABCDEFGH"
+        },
+        {
+          "type": "SECRET",
+          "value": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYz3+Qk"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "EMAIL",
+          "value": "it-security@corp.com"
+        },
+        {
+          "type": "EMAIL",
+          "value": "ciso@corp.com, legal@corp.com"
+        },
+        {
+          "type": "SECRET",
+          "value": "AKIAWXYZ1234ABCDEFGH\n  AWS_SECRET_ACCESS_KEY = wJalrXUtnFEMI/K7MDENG/bPxRfiCYz3+Qk"
+        }
+      ]
+    },
+    {
+      "id": "med_meeting_privacy_violation",
+      "group": "MEDIUM",
+      "category": "中長對話—會議記錄個資外洩",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 373,
+      "pii_expected_unique": 16,
+      "pii_detected_total": 14,
+      "inference_ms": 3447.6,
+      "chars_per_ms": 0.11,
+      "precision": 0.7143,
+      "recall": 0.625,
+      "f1": 0.6667,
+      "fp_rate": 0.010724,
+      "tp": 10,
+      "fp": 4,
+      "fn": 6,
+      "per_type": {
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "expected": 3,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "PERSON": {
+          "tp": 3,
+          "fp": 4,
+          "fn": 3,
+          "expected": 6,
+          "detected": 7
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "SECRET": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "Kevin"
+        },
+        {
+          "type": "PERSON",
+          "value": "小雯"
+        },
+        {
+          "type": "PERSON",
+          "value": "Ananya Patel"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "新竹市東區"
+        },
+        {
+          "type": "DATE",
+          "value": "5/3"
+        },
+        {
+          "type": "DATE",
+          "value": "5/7"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "Kevin(PM),"
+        },
+        {
+          "type": "PERSON",
+          "value": "小雯(Design),"
+        },
+        {
+          "type": "PERSON",
+          "value": "Ananya Patel(Eng)"
+        },
+        {
+          "type": "PERSON",
+          "value": "新竹市東區"
+        }
+      ]
+    },
+    {
+      "id": "med_meeting_privacy_violation",
+      "group": "MEDIUM",
+      "category": "中長對話—會議記錄個資外洩",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 373,
+      "pii_expected_unique": 16,
+      "pii_detected_total": 14,
+      "inference_ms": 3479.9,
+      "chars_per_ms": 0.11,
+      "precision": 0.7143,
+      "recall": 0.625,
+      "f1": 0.6667,
+      "fp_rate": 0.010724,
+      "tp": 10,
+      "fp": 4,
+      "fn": 6,
+      "per_type": {
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "expected": 3,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "PERSON": {
+          "tp": 3,
+          "fp": 4,
+          "fn": 3,
+          "expected": 6,
+          "detected": 7
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "SECRET": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "Kevin"
+        },
+        {
+          "type": "PERSON",
+          "value": "小雯"
+        },
+        {
+          "type": "PERSON",
+          "value": "Ananya Patel"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "新竹市東區"
+        },
+        {
+          "type": "DATE",
+          "value": "5/3"
+        },
+        {
+          "type": "DATE",
+          "value": "5/7"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "Kevin(PM),"
+        },
+        {
+          "type": "PERSON",
+          "value": "小雯(Design),"
+        },
+        {
+          "type": "PERSON",
+          "value": "Ananya Patel(Eng)"
+        },
+        {
+          "type": "PERSON",
+          "value": "新竹市東區"
+        }
+      ]
+    },
+    {
+      "id": "med_zh_medical",
+      "group": "MEDIUM",
+      "category": "中長對話—中文醫療記錄",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 182,
+      "pii_expected_unique": 10,
+      "pii_detected_total": 10,
+      "inference_ms": 2760.9,
+      "chars_per_ms": 0.07,
+      "precision": 0.7,
+      "recall": 0.7,
+      "f1": 0.7,
+      "fp_rate": 0.016484,
+      "tp": 7,
+      "fp": 3,
+      "fn": 3,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 2,
+          "expected": 3,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "expected": 2,
+          "detected": 3
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "陳志明"
+        },
+        {
+          "type": "PERSON",
+          "value": "林文彬"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "0300567890"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "陳志明（夫），"
+        },
+        {
+          "type": "PERSON",
+          "value": "林文彬，診斷：第二型糖尿病，處方：Metformin 500mg"
+        },
+        {
+          "type": "PHONE",
+          "value": "0300567890"
+        }
+      ]
+    },
+    {
+      "id": "med_zh_medical",
+      "group": "MEDIUM",
+      "category": "中長對話—中文醫療記錄",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 182,
+      "pii_expected_unique": 10,
+      "pii_detected_total": 10,
+      "inference_ms": 2796.1,
+      "chars_per_ms": 0.07,
+      "precision": 0.7,
+      "recall": 0.7,
+      "f1": 0.7,
+      "fp_rate": 0.016484,
+      "tp": 7,
+      "fp": 3,
+      "fn": 3,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 2,
+          "expected": 3,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "expected": 2,
+          "detected": 3
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "陳志明"
+        },
+        {
+          "type": "PERSON",
+          "value": "林文彬"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "0300567890"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "陳志明（夫），"
+        },
+        {
+          "type": "PERSON",
+          "value": "林文彬，診斷：第二型糖尿病，處方：Metformin 500mg"
+        },
+        {
+          "type": "PHONE",
+          "value": "0300567890"
+        }
+      ]
+    },
+    {
+      "id": "med_en_healthcare",
+      "group": "MEDIUM",
+      "category": "中長對話—英文醫療記錄",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 314,
+      "pii_expected_unique": 11,
+      "pii_detected_total": 11,
+      "inference_ms": 2242.7,
+      "chars_per_ms": 0.14,
+      "precision": 0.7273,
+      "recall": 0.7273,
+      "f1": 0.7273,
+      "fp_rate": 0.009554,
+      "tp": 8,
+      "fp": 3,
+      "fn": 3,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "expected": 3,
+          "detected": 2
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "expected": 1,
+          "detected": 2
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "expected": 3,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "Sarah Chen"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "4521 Bellaire Blvd, Houston, TX 77025"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "GRP-3344"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "Dr. Sarah Chen"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "4521 Bellaire Blvd, Houston"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "77025"
+        }
+      ]
+    },
+    {
+      "id": "med_en_healthcare",
+      "group": "MEDIUM",
+      "category": "中長對話—英文醫療記錄",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 314,
+      "pii_expected_unique": 11,
+      "pii_detected_total": 11,
+      "inference_ms": 2250.4,
+      "chars_per_ms": 0.14,
+      "precision": 0.7273,
+      "recall": 0.7273,
+      "f1": 0.7273,
+      "fp_rate": 0.009554,
+      "tp": 8,
+      "fp": 3,
+      "fn": 3,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "expected": 3,
+          "detected": 2
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "expected": 1,
+          "detected": 2
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "expected": 3,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "Sarah Chen"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "4521 Bellaire Blvd, Houston, TX 77025"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "GRP-3344"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "Dr. Sarah Chen"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "4521 Bellaire Blvd, Houston"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "77025"
+        }
+      ]
+    },
+    {
+      "id": "long_incident_forensics",
+      "group": "LONG",
+      "category": "長文本—資安事件鑑識對話記錄",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 1772,
+      "pii_expected_unique": 17,
+      "pii_detected_total": 10,
+      "inference_ms": 17021.6,
+      "chars_per_ms": 0.1,
+      "precision": 0.6,
+      "recall": 0.3529,
+      "f1": 0.4444,
+      "fp_rate": 0.002257,
+      "tp": 6,
+      "fp": 4,
+      "fn": 11,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "expected": 5,
+          "detected": 4
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "expected": 4,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        },
+        "SECRET": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 2,
+          "expected": 2,
+          "detected": 3
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "expected": 2,
+          "detected": 0
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "David 林建宏"
+        },
+        {
+          "type": "PERSON",
+          "value": "David"
+        },
+        {
+          "type": "PERSON",
+          "value": "張律師"
+        },
+        {
+          "type": "EMAIL",
+          "value": "privacy@anonymous-registrar.com"
+        },
+        {
+          "type": "PHONE",
+          "value": "02-6632-1000"
+        },
+        {
+          "type": "URL",
+          "value": "postgresql://app_user:ProdDB!2026@rds-prod-01.corp.internal/users"
+        },
+        {
+          "type": "URL",
+          "value": "https://exfil-malicious.io/collect"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "185.220.101.34"
+        },
+        {
+          "type": "SECRET",
+          "value": "ProdDB!2026"
+        },
+        {
+          "type": "SECRET",
+          "value": "Emerg@2026!"
+        },
+        {
+          "type": "DATE",
+          "value": "2026-05-02"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "SECRET",
+          "value": "ProdDB!2026@rds-prod-01.corp.internal/users"
+        },
+        {
+          "type": "SECRET",
+          "value": "em_restore / Emerg@2026!"
+        },
+        {
+          "type": "SECRET",
+          "value": "a3f2b8c9d1e4f5a6b7c8d9e0f1a2b3c4"
+        },
+        {
+          "type": "PHONE",
+          "value": "02-6632-1000 #5678"
+        }
+      ]
+    },
+    {
+      "id": "long_incident_forensics",
+      "group": "LONG",
+      "category": "長文本—資安事件鑑識對話記錄",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 1772,
+      "pii_expected_unique": 17,
+      "pii_detected_total": 10,
+      "inference_ms": 16852.5,
+      "chars_per_ms": 0.11,
+      "precision": 0.6,
+      "recall": 0.3529,
+      "f1": 0.4444,
+      "fp_rate": 0.002257,
+      "tp": 6,
+      "fp": 4,
+      "fn": 11,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "expected": 5,
+          "detected": 4
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "expected": 4,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        },
+        "SECRET": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 2,
+          "expected": 2,
+          "detected": 3
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "expected": 2,
+          "detected": 0
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "David 林建宏"
+        },
+        {
+          "type": "PERSON",
+          "value": "David"
+        },
+        {
+          "type": "PERSON",
+          "value": "張律師"
+        },
+        {
+          "type": "EMAIL",
+          "value": "privacy@anonymous-registrar.com"
+        },
+        {
+          "type": "PHONE",
+          "value": "02-6632-1000"
+        },
+        {
+          "type": "URL",
+          "value": "postgresql://app_user:ProdDB!2026@rds-prod-01.corp.internal/users"
+        },
+        {
+          "type": "URL",
+          "value": "https://exfil-malicious.io/collect"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "185.220.101.34"
+        },
+        {
+          "type": "SECRET",
+          "value": "ProdDB!2026"
+        },
+        {
+          "type": "SECRET",
+          "value": "Emerg@2026!"
+        },
+        {
+          "type": "DATE",
+          "value": "2026-05-02"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "SECRET",
+          "value": "ProdDB!2026@rds-prod-01.corp.internal/users"
+        },
+        {
+          "type": "SECRET",
+          "value": "em_restore / Emerg@2026!"
+        },
+        {
+          "type": "SECRET",
+          "value": "a3f2b8c9d1e4f5a6b7c8d9e0f1a2b3c4"
+        },
+        {
+          "type": "PHONE",
+          "value": "02-6632-1000 #5678"
+        }
+      ]
+    },
+    {
+      "id": "long_multi_turn_social",
+      "group": "LONG",
+      "category": "長文本—多輪社交工程對話",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 934,
+      "pii_expected_unique": 12,
+      "pii_detected_total": 22,
+      "inference_ms": 17322.0,
+      "chars_per_ms": 0.05,
+      "precision": 0.5333,
+      "recall": 0.6667,
+      "f1": 0.5926,
+      "fp_rate": 0.007495,
+      "tp": 8,
+      "fp": 7,
+      "fn": 4,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "expected": 3,
+          "detected": 4
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 5,
+          "fn": 1,
+          "expected": 2,
+          "detected": 6
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "客服小陳"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "G123456789"
+        },
+        {
+          "type": "SECRET",
+          "value": "884726"
+        },
+        {
+          "type": "DATE",
+          "value": "3 月 14 號"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "李明哲先生"
+        },
+        {
+          "type": "PERSON",
+          "value": "身分證 G123456789"
+        },
+        {
+          "type": "PERSON",
+          "value": "leemingche123"
+        },
+        {
+          "type": "PERSON",
+          "value": "好的李先生"
+        },
+        {
+          "type": "PERSON",
+          "value": "李明哲: 對對對"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "0800-818-001"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "884726"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "884726"
+        }
+      ]
+    },
+    {
+      "id": "long_multi_turn_social",
+      "group": "LONG",
+      "category": "長文本—多輪社交工程對話",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 934,
+      "pii_expected_unique": 12,
+      "pii_detected_total": 22,
+      "inference_ms": 18267.5,
+      "chars_per_ms": 0.05,
+      "precision": 0.5333,
+      "recall": 0.6667,
+      "f1": 0.5926,
+      "fp_rate": 0.007495,
+      "tp": 8,
+      "fp": 7,
+      "fn": 4,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "expected": 3,
+          "detected": 4
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 5,
+          "fn": 1,
+          "expected": 2,
+          "detected": 6
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "客服小陳"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "G123456789"
+        },
+        {
+          "type": "SECRET",
+          "value": "884726"
+        },
+        {
+          "type": "DATE",
+          "value": "3 月 14 號"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "李明哲先生"
+        },
+        {
+          "type": "PERSON",
+          "value": "身分證 G123456789"
+        },
+        {
+          "type": "PERSON",
+          "value": "leemingche123"
+        },
+        {
+          "type": "PERSON",
+          "value": "好的李先生"
+        },
+        {
+          "type": "PERSON",
+          "value": "李明哲: 對對對"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "0800-818-001"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "884726"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "884726"
+        }
+      ]
+    },
+    {
+      "id": "long_cross_dept_email_chain",
+      "group": "LONG",
+      "category": "長文本—跨部門 Email 串",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 717,
+      "pii_expected_unique": 16,
+      "pii_detected_total": 13,
+      "inference_ms": 9329.3,
+      "chars_per_ms": 0.08,
+      "precision": 0.7692,
+      "recall": 0.625,
+      "f1": 0.6897,
+      "fp_rate": 0.004184,
+      "tp": 10,
+      "fp": 3,
+      "fn": 6,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "expected": 4,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        },
+        "EMAIL": {
+          "tp": 3,
+          "fp": 2,
+          "fn": 0,
+          "expected": 3,
+          "detected": 5
+        },
+        "PERSON": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "expected": 3,
+          "detected": 2
+        },
+        "PHONE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "expected": 4,
+          "detected": 3
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "山本隆史"
+        },
+        {
+          "type": "PHONE",
+          "value": "+886-2-8789-0001"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "東京都千代田区丸の内1-1-3"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "T4010001234567"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "12345678"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "888-123456-789"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "EMAIL",
+          "value": "legal@megacorp.com"
+        },
+        {
+          "type": "EMAIL",
+          "value": "cfo@megacorp.com"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "東京都千代田区丸の内1-1-3 三井物産ビル 12F"
+        }
+      ]
+    },
+    {
+      "id": "long_cross_dept_email_chain",
+      "group": "LONG",
+      "category": "長文本—跨部門 Email 串",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 717,
+      "pii_expected_unique": 16,
+      "pii_detected_total": 13,
+      "inference_ms": 7736.9,
+      "chars_per_ms": 0.09,
+      "precision": 0.7692,
+      "recall": 0.625,
+      "f1": 0.6897,
+      "fp_rate": 0.004184,
+      "tp": 10,
+      "fp": 3,
+      "fn": 6,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "expected": 4,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        },
+        "EMAIL": {
+          "tp": 3,
+          "fp": 2,
+          "fn": 0,
+          "expected": 3,
+          "detected": 5
+        },
+        "PERSON": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "expected": 3,
+          "detected": 2
+        },
+        "PHONE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "expected": 4,
+          "detected": 3
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "山本隆史"
+        },
+        {
+          "type": "PHONE",
+          "value": "+886-2-8789-0001"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "東京都千代田区丸の内1-1-3"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "T4010001234567"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "12345678"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "888-123456-789"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "EMAIL",
+          "value": "legal@megacorp.com"
+        },
+        {
+          "type": "EMAIL",
+          "value": "cfo@megacorp.com"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "東京都千代田区丸の内1-1-3 三井物産ビル 12F"
+        }
+      ]
+    },
+    {
+      "id": "long_ransomware_negotiation",
+      "group": "LONG",
+      "category": "長文本—勒索軟體談判對話",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 1488,
+      "pii_expected_unique": 19,
+      "pii_detected_total": 16,
+      "inference_ms": 9085.0,
+      "chars_per_ms": 0.16,
+      "precision": 0.875,
+      "recall": 0.7368,
+      "f1": 0.8,
+      "fp_rate": 0.001344,
+      "tp": 14,
+      "fp": 2,
+      "fn": 5,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 5,
+          "expected": 9,
+          "detected": 6
+        },
+        "DATE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "SECRET": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "8842"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "7710"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "9935"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "109-83-4567"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "876-54-3210"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "ACCOUNT",
+          "value": "SSN 109-83-4567"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "SSN 876-54-3210"
+        }
+      ]
+    },
+    {
+      "id": "long_ransomware_negotiation",
+      "group": "LONG",
+      "category": "長文本—勒索軟體談判對話",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 1488,
+      "pii_expected_unique": 19,
+      "pii_detected_total": 16,
+      "inference_ms": 9202.9,
+      "chars_per_ms": 0.16,
+      "precision": 0.875,
+      "recall": 0.7368,
+      "f1": 0.8,
+      "fp_rate": 0.001344,
+      "tp": 14,
+      "fp": 2,
+      "fn": 5,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 5,
+          "expected": 9,
+          "detected": 6
+        },
+        "DATE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "SECRET": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "8842"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "7710"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "9935"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "109-83-4567"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "876-54-3210"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "ACCOUNT",
+          "value": "SSN 109-83-4567"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "SSN 876-54-3210"
+        }
+      ]
+    },
+    {
+      "id": "long_taiwan_breach_notification",
+      "group": "LONG",
+      "category": "長文本—台灣個資外洩通報文件",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 1034,
+      "pii_expected_unique": 26,
+      "pii_detected_total": 26,
+      "inference_ms": 12570.1,
+      "chars_per_ms": 0.08,
+      "precision": 0.72,
+      "recall": 0.6923,
+      "f1": 0.7059,
+      "fp_rate": 0.00677,
+      "tp": 18,
+      "fp": 7,
+      "fn": 8,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "ADDRESS": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 4,
+          "expected": 5,
+          "detected": 3
+        },
+        "EMAIL": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "expected": 5,
+          "detected": 5
+        },
+        "PERSON": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 1,
+          "expected": 5,
+          "detected": 6
+        },
+        "PHONE": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 0,
+          "expected": 5,
+          "detected": 6
+        },
+        "SECRET": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "expected": 2,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "expected": 0,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "林怡君"
+        },
+        {
+          "type": "DATE",
+          "value": "1985/07/14"
+        },
+        {
+          "type": "DATE",
+          "value": "1988/03/25"
+        },
+        {
+          "type": "DATE",
+          "value": "2026 年 5 月 3 日"
+        },
+        {
+          "type": "DATE",
+          "value": "2026 年 5 月 2 日"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "45.33.32.156"
+        },
+        {
+          "type": "SECRET",
+          "value": "XxEcommerce!2026"
+        },
+        {
+          "type": "SECRET",
+          "value": "Ch@ngeMe!Immedi@tely"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "資安部 周俊宏"
+        },
+        {
+          "type": "PERSON",
+          "value": "法務長 林怡君"
+        },
+        {
+          "type": "PHONE",
+          "value": "02-8792-3456 #1234"
+        },
+        {
+          "type": "DATE",
+          "value": "生日: 1985/07/14"
+        },
+        {
+          "type": "DATE",
+          "value": "生日: 1988/03/25"
+        },
+        {
+          "type": "URL",
+          "value": "45.33.32.156"
+        },
+        {
+          "type": "SECRET",
+          "value": "DB_admin / Ch@ngeMe!Immedi@tely"
+        }
+      ]
+    },
+    {
+      "id": "long_taiwan_breach_notification",
+      "group": "LONG",
+      "category": "長文本—台灣個資外洩通報文件",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 1034,
+      "pii_expected_unique": 26,
+      "pii_detected_total": 26,
+      "inference_ms": 12804.5,
+      "chars_per_ms": 0.08,
+      "precision": 0.72,
+      "recall": 0.6923,
+      "f1": 0.7059,
+      "fp_rate": 0.00677,
+      "tp": 18,
+      "fp": 7,
+      "fn": 8,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "ADDRESS": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 4,
+          "expected": 5,
+          "detected": 3
+        },
+        "EMAIL": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "expected": 5,
+          "detected": 5
+        },
+        "PERSON": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 1,
+          "expected": 5,
+          "detected": 6
+        },
+        "PHONE": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 0,
+          "expected": 5,
+          "detected": 6
+        },
+        "SECRET": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "expected": 2,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "expected": 0,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "林怡君"
+        },
+        {
+          "type": "DATE",
+          "value": "1985/07/14"
+        },
+        {
+          "type": "DATE",
+          "value": "1988/03/25"
+        },
+        {
+          "type": "DATE",
+          "value": "2026 年 5 月 3 日"
+        },
+        {
+          "type": "DATE",
+          "value": "2026 年 5 月 2 日"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "45.33.32.156"
+        },
+        {
+          "type": "SECRET",
+          "value": "XxEcommerce!2026"
+        },
+        {
+          "type": "SECRET",
+          "value": "Ch@ngeMe!Immedi@tely"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "資安部 周俊宏"
+        },
+        {
+          "type": "PERSON",
+          "value": "法務長 林怡君"
+        },
+        {
+          "type": "PHONE",
+          "value": "02-8792-3456 #1234"
+        },
+        {
+          "type": "DATE",
+          "value": "生日: 1985/07/14"
+        },
+        {
+          "type": "DATE",
+          "value": "生日: 1988/03/25"
+        },
+        {
+          "type": "URL",
+          "value": "45.33.32.156"
+        },
+        {
+          "type": "SECRET",
+          "value": "DB_admin / Ch@ngeMe!Immedi@tely"
+        }
+      ]
+    },
+    {
+      "id": "oral_line_bilingual",
+      "group": "ORAL",
+      "category": "口語—中英切換 LINE 對話",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 189,
+      "pii_expected_unique": 3,
+      "pii_detected_total": 3,
+      "inference_ms": 1569.5,
+      "chars_per_ms": 0.12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "oral_line_bilingual",
+      "group": "ORAL",
+      "category": "口語—中英切換 LINE 對話",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 189,
+      "pii_expected_unique": 3,
+      "pii_detected_total": 3,
+      "inference_ms": 1575.7,
+      "chars_per_ms": 0.12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "oral_zhuyin_slang",
+      "group": "ORAL",
+      "category": "口語—注音文與網路用語",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 163,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 5,
+      "inference_ms": 2280.0,
+      "chars_per_ms": 0.07,
+      "precision": 0.6,
+      "recall": 0.6,
+      "f1": 0.6,
+      "fp_rate": 0.01227,
+      "tp": 3,
+      "fp": 2,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "F123456789"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "台北市萬華區康定路25巷8號5樓"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "ACCOUNT",
+          "value": "F123456789 ㄅ"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "住台北市萬華區康定路25巷8號5樓"
+        }
+      ]
+    },
+    {
+      "id": "oral_zhuyin_slang",
+      "group": "ORAL",
+      "category": "口語—注音文與網路用語",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 163,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 5,
+      "inference_ms": 2222.1,
+      "chars_per_ms": 0.07,
+      "precision": 0.6,
+      "recall": 0.6,
+      "f1": 0.6,
+      "fp_rate": 0.01227,
+      "tp": 3,
+      "fp": 2,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "F123456789"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "台北市萬華區康定路25巷8號5樓"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "ACCOUNT",
+          "value": "F123456789 ㄅ"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "住台北市萬華區康定路25巷8號5樓"
+        }
+      ]
+    },
+    {
+      "id": "oral_slack_format",
+      "group": "ORAL",
+      "category": "口語—Slack 特殊格式",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 429,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 5,
+      "inference_ms": 3453.4,
+      "chars_per_ms": 0.12,
+      "precision": 0.6,
+      "recall": 0.6,
+      "f1": 0.6,
+      "fp_rate": 0.004662,
+      "tp": 3,
+      "fp": 2,
+      "fn": 2,
+      "per_type": {
+        "PERSON": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "SECRET": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 2,
+          "expected": 2,
+          "detected": 2
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "SECRET",
+          "value": "Sl@veDB!2026"
+        },
+        {
+          "type": "SECRET",
+          "value": "sk-analytics-prod-9fXmP2kRvW4nQ7tY3bK"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "SECRET",
+          "value": "Prod DB ReadOnly"
+        },
+        {
+          "type": "SECRET",
+          "value": "sk-analytics-prod-9fXmP2kRvW4nQ7tY3bK`"
+        }
+      ]
+    },
+    {
+      "id": "oral_slack_format",
+      "group": "ORAL",
+      "category": "口語—Slack 特殊格式",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 429,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 5,
+      "inference_ms": 3121.3,
+      "chars_per_ms": 0.14,
+      "precision": 0.6,
+      "recall": 0.6,
+      "f1": 0.6,
+      "fp_rate": 0.004662,
+      "tp": 3,
+      "fp": 2,
+      "fn": 2,
+      "per_type": {
+        "PERSON": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "SECRET": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 2,
+          "expected": 2,
+          "detected": 2
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "SECRET",
+          "value": "Sl@veDB!2026"
+        },
+        {
+          "type": "SECRET",
+          "value": "sk-analytics-prod-9fXmP2kRvW4nQ7tY3bK"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "SECRET",
+          "value": "Prod DB ReadOnly"
+        },
+        {
+          "type": "SECRET",
+          "value": "sk-analytics-prod-9fXmP2kRvW4nQ7tY3bK`"
+        }
+      ]
+    },
+    {
+      "id": "oral_emoji_heavy",
+      "group": "ORAL",
+      "category": "口語—大量表情符號",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 198,
+      "pii_expected_unique": 6,
+      "pii_detected_total": 4,
+      "inference_ms": 2837.2,
+      "chars_per_ms": 0.07,
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "fp_rate": 0.0,
+      "tp": 4,
+      "fp": 0,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "URL",
+          "value": "https://bit.ly/tw-bank-verify"
+        },
+        {
+          "type": "DATE",
+          "value": "08/26"
+        }
+      ],
+      "false_positives": []
+    },
+    {
+      "id": "oral_emoji_heavy",
+      "group": "ORAL",
+      "category": "口語—大量表情符號",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 198,
+      "pii_expected_unique": 6,
+      "pii_detected_total": 4,
+      "inference_ms": 2803.6,
+      "chars_per_ms": 0.07,
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "fp_rate": 0.0,
+      "tp": 4,
+      "fp": 0,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "URL",
+          "value": "https://bit.ly/tw-bank-verify"
+        },
+        {
+          "type": "DATE",
+          "value": "08/26"
+        }
+      ],
+      "false_positives": []
+    },
+    {
+      "id": "oral_cantonese_mix",
+      "group": "ORAL",
+      "category": "口語—粵語中英混雜",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 182,
+      "pii_expected_unique": 7,
+      "pii_detected_total": 5,
+      "inference_ms": 2453.1,
+      "chars_per_ms": 0.07,
+      "precision": 0.8,
+      "recall": 0.5714,
+      "f1": 0.6667,
+      "fp_rate": 0.005495,
+      "tp": 4,
+      "fp": 1,
+      "fn": 3,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "expected": 2,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "陳偉霆"
+        },
+        {
+          "type": "PERSON",
+          "value": "William Chan"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "G123456"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "陳偉霆 William Chan"
+        }
+      ]
+    },
+    {
+      "id": "oral_cantonese_mix",
+      "group": "ORAL",
+      "category": "口語—粵語中英混雜",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 182,
+      "pii_expected_unique": 7,
+      "pii_detected_total": 5,
+      "inference_ms": 2496.5,
+      "chars_per_ms": 0.07,
+      "precision": 0.8,
+      "recall": 0.5714,
+      "f1": 0.6667,
+      "fp_rate": 0.005495,
+      "tp": 4,
+      "fp": 1,
+      "fn": 3,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "expected": 2,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "陳偉霆"
+        },
+        {
+          "type": "PERSON",
+          "value": "William Chan"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "G123456"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "陳偉霆 William Chan"
+        }
+      ]
+    },
+    {
+      "id": "oral_discord_gaming",
+      "group": "ORAL",
+      "category": "口語—遊戲 Discord 對話",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 461,
+      "pii_expected_unique": 4,
+      "pii_detected_total": 13,
+      "inference_ms": 3317.3,
+      "chars_per_ms": 0.14,
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636,
+      "fp_rate": 0.010846,
+      "tp": 2,
+      "fp": 5,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "expected": 2,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "expected": 0,
+          "detected": 4
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "expected": 0,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "203.0.113.42"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "kawaii_nyan_tw"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "dragon_slayer"
+        },
+        {
+          "type": "PERSON",
+          "value": "xXShadowXx"
+        },
+        {
+          "type": "PERSON",
+          "value": "xXShadowXx"
+        },
+        {
+          "type": "PERSON",
+          "value": "dragon_slayer"
+        },
+        {
+          "type": "PERSON",
+          "value": "dragon_slayer"
+        },
+        {
+          "type": "PERSON",
+          "value": "kawaii_nyan"
+        },
+        {
+          "type": "PERSON",
+          "value": "dragon_slayer"
+        },
+        {
+          "type": "PERSON",
+          "value": "kawaii_nyan"
+        },
+        {
+          "type": "PERSON",
+          "value": "kawaii_nyan"
+        },
+        {
+          "type": "PERSON",
+          "value": "kawaii_nyan_tw"
+        },
+        {
+          "type": "URL",
+          "value": "203.0.113.42:25565"
+        }
+      ]
+    },
+    {
+      "id": "oral_discord_gaming",
+      "group": "ORAL",
+      "category": "口語—遊戲 Discord 對話",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 461,
+      "pii_expected_unique": 4,
+      "pii_detected_total": 13,
+      "inference_ms": 3263.6,
+      "chars_per_ms": 0.14,
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636,
+      "fp_rate": 0.010846,
+      "tp": 2,
+      "fp": 5,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "expected": 2,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "expected": 0,
+          "detected": 4
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "expected": 0,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "203.0.113.42"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "kawaii_nyan_tw"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "dragon_slayer"
+        },
+        {
+          "type": "PERSON",
+          "value": "xXShadowXx"
+        },
+        {
+          "type": "PERSON",
+          "value": "xXShadowXx"
+        },
+        {
+          "type": "PERSON",
+          "value": "dragon_slayer"
+        },
+        {
+          "type": "PERSON",
+          "value": "dragon_slayer"
+        },
+        {
+          "type": "PERSON",
+          "value": "kawaii_nyan"
+        },
+        {
+          "type": "PERSON",
+          "value": "dragon_slayer"
+        },
+        {
+          "type": "PERSON",
+          "value": "kawaii_nyan"
+        },
+        {
+          "type": "PERSON",
+          "value": "kawaii_nyan"
+        },
+        {
+          "type": "PERSON",
+          "value": "kawaii_nyan_tw"
+        },
+        {
+          "type": "URL",
+          "value": "203.0.113.42:25565"
+        }
+      ]
+    },
+    {
+      "id": "oral_wechat_moment",
+      "group": "ORAL",
+      "category": "口語—微信朋友圈個資暴露",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 194,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 5,
+      "inference_ms": 3465.4,
+      "chars_per_ms": 0.06,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "oral_wechat_moment",
+      "group": "ORAL",
+      "category": "口語—微信朋友圈個資暴露",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 194,
+      "pii_expected_unique": 5,
+      "pii_detected_total": 5,
+      "inference_ms": 3496.0,
+      "chars_per_ms": 0.06,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "oral_meeting_transcript",
+      "group": "ORAL",
+      "category": "口語—逐字稿式會議記錄",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 349,
+      "pii_expected_unique": 9,
+      "pii_detected_total": 9,
+      "inference_ms": 4809.1,
+      "chars_per_ms": 0.07,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PERSON": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "oral_meeting_transcript",
+      "group": "ORAL",
+      "category": "口語—逐字稿式會議記錄",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 349,
+      "pii_expected_unique": 9,
+      "pii_detected_total": 9,
+      "inference_ms": 4831.4,
+      "chars_per_ms": 0.07,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp_rate": 0.0,
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PERSON": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        }
+      },
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "struct_json_log",
+      "group": "STRUCT",
+      "category": "結構化—JSON 日誌",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 382,
+      "pii_expected_unique": 6,
+      "pii_detected_total": 5,
+      "inference_ms": 2928.8,
+      "chars_per_ms": 0.13,
+      "precision": 0.8,
+      "recall": 0.6667,
+      "f1": 0.7273,
+      "fp_rate": 0.002618,
+      "tp": 4,
+      "fp": 1,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "192.168.1.105"
+        },
+        {
+          "type": "DATE",
+          "value": "2026-05-03"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "DATE",
+          "value": "2026-05-03T08:15:22Z"
+        }
+      ]
+    },
+    {
+      "id": "struct_json_log",
+      "group": "STRUCT",
+      "category": "結構化—JSON 日誌",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 382,
+      "pii_expected_unique": 6,
+      "pii_detected_total": 5,
+      "inference_ms": 2922.3,
+      "chars_per_ms": 0.13,
+      "precision": 0.8,
+      "recall": 0.6667,
+      "f1": 0.7273,
+      "fp_rate": 0.002618,
+      "tp": 4,
+      "fp": 1,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "SECRET": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "192.168.1.105"
+        },
+        {
+          "type": "DATE",
+          "value": "2026-05-03"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "DATE",
+          "value": "2026-05-03T08:15:22Z"
+        }
+      ]
+    },
+    {
+      "id": "struct_email_raw_headers",
+      "group": "STRUCT",
+      "category": "結構化—Email 原始標頭",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 517,
+      "pii_expected_unique": 7,
+      "pii_detected_total": 5,
+      "inference_ms": 4255.3,
+      "chars_per_ms": 0.12,
+      "precision": 0.25,
+      "recall": 0.1429,
+      "f1": 0.1818,
+      "fp_rate": 0.005803,
+      "tp": 1,
+      "fp": 3,
+      "fn": 6,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 3,
+          "expected": 3,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "expected": 0,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "EMAIL",
+          "value": "no-reply@banking-secure.com"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "209.85.220.41"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "198.51.100.23"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "BANK-998877"
+        },
+        {
+          "type": "DATE",
+          "value": "5 May 2026"
+        },
+        {
+          "type": "PERSON",
+          "value": "Jane Doe"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "URL",
+          "value": "209.85.220.41"
+        },
+        {
+          "type": "URL",
+          "value": "198.51.100.23"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "ESMTPS id 4F2A3B8C"
+        }
+      ]
+    },
+    {
+      "id": "struct_email_raw_headers",
+      "group": "STRUCT",
+      "category": "結構化—Email 原始標頭",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 517,
+      "pii_expected_unique": 7,
+      "pii_detected_total": 5,
+      "inference_ms": 4306.6,
+      "chars_per_ms": 0.12,
+      "precision": 0.25,
+      "recall": 0.1429,
+      "f1": 0.1818,
+      "fp_rate": 0.005803,
+      "tp": 1,
+      "fp": 3,
+      "fn": 6,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 3,
+          "expected": 3,
+          "detected": 1
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "expected": 0,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "EMAIL",
+          "value": "no-reply@banking-secure.com"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "209.85.220.41"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "198.51.100.23"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "BANK-998877"
+        },
+        {
+          "type": "DATE",
+          "value": "5 May 2026"
+        },
+        {
+          "type": "PERSON",
+          "value": "Jane Doe"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "URL",
+          "value": "209.85.220.41"
+        },
+        {
+          "type": "URL",
+          "value": "198.51.100.23"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "ESMTPS id 4F2A3B8C"
+        }
+      ]
+    },
+    {
+      "id": "struct_sql_dump",
+      "group": "STRUCT",
+      "category": "結構化—SQL dump 含個資",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 524,
+      "pii_expected_unique": 21,
+      "pii_detected_total": 21,
+      "inference_ms": 4673.5,
+      "chars_per_ms": 0.11,
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667,
+      "fp_rate": 0.013359,
+      "tp": 14,
+      "fp": 7,
+      "fn": 7,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 5,
+          "expected": 6,
+          "detected": 2
+        },
+        "ADDRESS": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "DATE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "EMAIL": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "PERSON": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 6,
+          "fn": 2,
+          "expected": 3,
+          "detected": 7
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PHONE",
+          "value": "+1-303-555-0123"
+        },
+        {
+          "type": "PHONE",
+          "value": "720-555-0177"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "321-98-7654"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "654-32-1098"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "3782-822463-10005"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "6011-5567-8901-2345"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "5454-3301-2299-8877"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PHONE",
+          "value": "'+1-303-555-0123"
+        },
+        {
+          "type": "PHONE",
+          "value": "321-98-7654"
+        },
+        {
+          "type": "PHONE",
+          "value": "3782-822463-10005"
+        },
+        {
+          "type": "PHONE",
+          "value": "654-32-1098"
+        },
+        {
+          "type": "PHONE",
+          "value": "6011-5567-8901-2345"
+        },
+        {
+          "type": "PHONE",
+          "value": "5454-3301-2299-8877"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "720-555-0177"
+        }
+      ]
+    },
+    {
+      "id": "struct_sql_dump",
+      "group": "STRUCT",
+      "category": "結構化—SQL dump 含個資",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 524,
+      "pii_expected_unique": 21,
+      "pii_detected_total": 21,
+      "inference_ms": 4553.5,
+      "chars_per_ms": 0.12,
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667,
+      "fp_rate": 0.013359,
+      "tp": 14,
+      "fp": 7,
+      "fn": 7,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 5,
+          "expected": 6,
+          "detected": 2
+        },
+        "ADDRESS": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "DATE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "EMAIL": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "PERSON": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 6,
+          "fn": 2,
+          "expected": 3,
+          "detected": 7
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PHONE",
+          "value": "+1-303-555-0123"
+        },
+        {
+          "type": "PHONE",
+          "value": "720-555-0177"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "321-98-7654"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "654-32-1098"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "3782-822463-10005"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "6011-5567-8901-2345"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "5454-3301-2299-8877"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PHONE",
+          "value": "'+1-303-555-0123"
+        },
+        {
+          "type": "PHONE",
+          "value": "321-98-7654"
+        },
+        {
+          "type": "PHONE",
+          "value": "3782-822463-10005"
+        },
+        {
+          "type": "PHONE",
+          "value": "654-32-1098"
+        },
+        {
+          "type": "PHONE",
+          "value": "6011-5567-8901-2345"
+        },
+        {
+          "type": "PHONE",
+          "value": "5454-3301-2299-8877"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "720-555-0177"
+        }
+      ]
+    },
+    {
+      "id": "struct_config_file",
+      "group": "STRUCT",
+      "category": "結構化—設定檔含明文憑證",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 729,
+      "pii_expected_unique": 8,
+      "pii_detected_total": 6,
+      "inference_ms": 6457.3,
+      "chars_per_ms": 0.11,
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "fp_rate": 0.002743,
+      "tp": 4,
+      "fp": 2,
+      "fn": 4,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "SECRET": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 1,
+          "expected": 5,
+          "detected": 6
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "expected": 2,
+          "detected": 0
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "URL",
+          "value": "rds-prod.cluster-c8xk9q.us-east-1.rds.amazonaws.com"
+        },
+        {
+          "type": "URL",
+          "value": "https://hooks.slack.com/services/T00000000/B00000000/xxxxxxxxxxxx"
+        },
+        {
+          "type": "SECRET",
+          "value": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "AKIAIOSFODNN7EXAMPLE"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "SECRET",
+          "value": "rds-prod.cluster-c8xk9q.us-east-1.rds.amazonaws.com"
+        },
+        {
+          "type": "SECRET",
+          "value": "AKIAIOSFODNN7EXAMPLE\nAWS_SECRET_ACCESS_KEY = wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY"
+        }
+      ]
+    },
+    {
+      "id": "struct_config_file",
+      "group": "STRUCT",
+      "category": "結構化—設定檔含明文憑證",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 729,
+      "pii_expected_unique": 8,
+      "pii_detected_total": 6,
+      "inference_ms": 6555.8,
+      "chars_per_ms": 0.11,
+      "precision": 0.6667,
+      "recall": 0.5,
+      "f1": 0.5714,
+      "fp_rate": 0.002743,
+      "tp": 4,
+      "fp": 2,
+      "fn": 4,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "SECRET": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 1,
+          "expected": 5,
+          "detected": 6
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "expected": 2,
+          "detected": 0
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "URL",
+          "value": "rds-prod.cluster-c8xk9q.us-east-1.rds.amazonaws.com"
+        },
+        {
+          "type": "URL",
+          "value": "https://hooks.slack.com/services/T00000000/B00000000/xxxxxxxxxxxx"
+        },
+        {
+          "type": "SECRET",
+          "value": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "AKIAIOSFODNN7EXAMPLE"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "SECRET",
+          "value": "rds-prod.cluster-c8xk9q.us-east-1.rds.amazonaws.com"
+        },
+        {
+          "type": "SECRET",
+          "value": "AKIAIOSFODNN7EXAMPLE\nAWS_SECRET_ACCESS_KEY = wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY"
+        }
+      ]
+    },
+    {
+      "id": "struct_nginx_access_log",
+      "group": "STRUCT",
+      "category": "結構化—Nginx access log",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 498,
+      "pii_expected_unique": 7,
+      "pii_detected_total": 1,
+      "inference_ms": 5167.8,
+      "chars_per_ms": 0.1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.002008,
+      "tp": 0,
+      "fp": 1,
+      "fn": 7,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "expected": 3,
+          "detected": 0
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "SECRET": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "expected": 2,
+          "detected": 0
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "expected": 0,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "45.33.32.156"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "192.168.1.1"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "10.0.0.5"
+        },
+        {
+          "type": "EMAIL",
+          "value": "admin@corp.com"
+        },
+        {
+          "type": "SECRET",
+          "value": "eyJhbGciOiJIUzI1NiJ9"
+        },
+        {
+          "type": "SECRET",
+          "value": "Admin123!"
+        },
+        {
+          "type": "DATE",
+          "value": "03/May/2026"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "URL",
+          "value": "GET /api/users?email=admin@corp.com&token=eyJhbGciOiJIUzI1NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "struct_nginx_access_log",
+      "group": "STRUCT",
+      "category": "結構化—Nginx access log",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 498,
+      "pii_expected_unique": 7,
+      "pii_detected_total": 1,
+      "inference_ms": 5184.6,
+      "chars_per_ms": 0.1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.002008,
+      "tp": 0,
+      "fp": 1,
+      "fn": 7,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "expected": 3,
+          "detected": 0
+        },
+        "DATE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "SECRET": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "expected": 2,
+          "detected": 0
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "expected": 0,
+          "detected": 1
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ACCOUNT",
+          "value": "45.33.32.156"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "192.168.1.1"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "10.0.0.5"
+        },
+        {
+          "type": "EMAIL",
+          "value": "admin@corp.com"
+        },
+        {
+          "type": "SECRET",
+          "value": "eyJhbGciOiJIUzI1NiJ9"
+        },
+        {
+          "type": "SECRET",
+          "value": "Admin123!"
+        },
+        {
+          "type": "DATE",
+          "value": "03/May/2026"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "URL",
+          "value": "GET /api/users?email=admin@corp.com&token=eyJhbGciOiJIUzI1NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "multi_jp_business_card",
+      "group": "MULTI",
+      "category": "多語言—日本名片資訊",
+      "language": "日文",
+      "run_index": 0,
+      "text_length": 205,
+      "pii_expected_unique": 7,
+      "pii_detected_total": 3,
+      "inference_ms": 2319.1,
+      "chars_per_ms": 0.09,
+      "precision": 0.6667,
+      "recall": 0.2857,
+      "f1": 0.4,
+      "fp_rate": 0.004878,
+      "tp": 2,
+      "fp": 1,
+      "fn": 5,
+      "per_type": {
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "expected": 2,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "佐藤健一"
+        },
+        {
+          "type": "PERSON",
+          "value": "Kenichi Sato"
+        },
+        {
+          "type": "PHONE",
+          "value": "03-1234-5678"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "東京都千代田区丸の内1-2-3"
+        },
+        {
+          "type": "URL",
+          "value": "https://www.techno-sol.co.jp"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "佐藤健一 (Kenichi Sato)"
+        }
+      ]
+    },
+    {
+      "id": "multi_jp_business_card",
+      "group": "MULTI",
+      "category": "多語言—日本名片資訊",
+      "language": "日文",
+      "run_index": 1,
+      "text_length": 205,
+      "pii_expected_unique": 7,
+      "pii_detected_total": 3,
+      "inference_ms": 2304.2,
+      "chars_per_ms": 0.09,
+      "precision": 0.6667,
+      "recall": 0.2857,
+      "f1": 0.4,
+      "fp_rate": 0.004878,
+      "tp": 2,
+      "fp": 1,
+      "fn": 5,
+      "per_type": {
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        },
+        "EMAIL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "expected": 1,
+          "detected": 1
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "expected": 2,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "URL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "expected": 1,
+          "detected": 0
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "佐藤健一"
+        },
+        {
+          "type": "PERSON",
+          "value": "Kenichi Sato"
+        },
+        {
+          "type": "PHONE",
+          "value": "03-1234-5678"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "東京都千代田区丸の内1-2-3"
+        },
+        {
+          "type": "URL",
+          "value": "https://www.techno-sol.co.jp"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "佐藤健一 (Kenichi Sato)"
+        }
+      ]
+    },
+    {
+      "id": "multi_kr_business",
+      "group": "MULTI",
+      "category": "多語言—韓國商務對話",
+      "language": "韓文",
+      "run_index": 0,
+      "text_length": 235,
+      "pii_expected_unique": 9,
+      "pii_detected_total": 8,
+      "inference_ms": 2859.5,
+      "chars_per_ms": 0.08,
+      "precision": 0.75,
+      "recall": 0.6667,
+      "f1": 0.7059,
+      "fp_rate": 0.008511,
+      "tp": 6,
+      "fp": 2,
+      "fn": 3,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "expected": 2,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "김민수"
+        },
+        {
+          "type": "PERSON",
+          "value": "박지영"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "서울특별시 강남구 테헤란로 152"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "김민수 과장님"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "서울특별시 강남구 테헤란로 152, 강남파이낸스센터 23층"
+        }
+      ]
+    },
+    {
+      "id": "multi_kr_business",
+      "group": "MULTI",
+      "category": "多語言—韓國商務對話",
+      "language": "韓文",
+      "run_index": 1,
+      "text_length": 235,
+      "pii_expected_unique": 9,
+      "pii_detected_total": 8,
+      "inference_ms": 2880.7,
+      "chars_per_ms": 0.08,
+      "precision": 0.75,
+      "recall": 0.6667,
+      "f1": 0.7059,
+      "fp_rate": 0.008511,
+      "tp": 6,
+      "fp": 2,
+      "fn": 3,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "expected": 2,
+          "detected": 1
+        },
+        "PHONE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "김민수"
+        },
+        {
+          "type": "PERSON",
+          "value": "박지영"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "서울특별시 강남구 테헤란로 152"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "김민수 과장님"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "서울특별시 강남구 테헤란로 152, 강남파이낸스센터 23층"
+        }
+      ]
+    },
+    {
+      "id": "multi_cn_jp_trading",
+      "group": "MULTI",
+      "category": "多語言—中日貿易往來郵件",
+      "language": "中英日混雜",
+      "run_index": 0,
+      "text_length": 449,
+      "pii_expected_unique": 14,
+      "pii_detected_total": 13,
+      "inference_ms": 5859.1,
+      "chars_per_ms": 0.08,
+      "precision": 0.4615,
+      "recall": 0.4286,
+      "f1": 0.4444,
+      "fp_rate": 0.01559,
+      "tp": 6,
+      "fp": 7,
+      "fn": 8,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 1,
+          "expected": 2,
+          "detected": 3
+        },
+        "EMAIL": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 5,
+          "expected": 5,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "張博鈞"
+        },
+        {
+          "type": "PERSON",
+          "value": "Po-Chun Chang"
+        },
+        {
+          "type": "PERSON",
+          "value": "山田太郎"
+        },
+        {
+          "type": "PERSON",
+          "value": "林佳瑩"
+        },
+        {
+          "type": "PERSON",
+          "value": "Chia-Ying Lin"
+        },
+        {
+          "type": "PHONE",
+          "value": "+886-3-563-6688"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "大阪市北区中之島3-3-3"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "0123456"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "佐藤様"
+        },
+        {
+          "type": "PERSON",
+          "value": "張博鈞 (Po-Chun Chang)"
+        },
+        {
+          "type": "PERSON",
+          "value": "林佳瑩 (Chia-Ying Lin)"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "三菱UFJ銀行 梅田支店 普通 0123456\n金額：JPY 15,800,000（税込）"
+        },
+        {
+          "type": "PHONE",
+          "value": "+886-3-563-6688 ext 12345"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "株式会社山田商会 経理部 山田太郎 様"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "〒530-0005 大阪市北区中之島3-3-3 中之島三井ビル 10F"
+        }
+      ]
+    },
+    {
+      "id": "multi_cn_jp_trading",
+      "group": "MULTI",
+      "category": "多語言—中日貿易往來郵件",
+      "language": "中英日混雜",
+      "run_index": 1,
+      "text_length": 449,
+      "pii_expected_unique": 14,
+      "pii_detected_total": 13,
+      "inference_ms": 5433.3,
+      "chars_per_ms": 0.08,
+      "precision": 0.4615,
+      "recall": 0.4286,
+      "f1": 0.4444,
+      "fp_rate": 0.01559,
+      "tp": 6,
+      "fp": 7,
+      "fn": 8,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        },
+        "ADDRESS": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 1,
+          "expected": 2,
+          "detected": 3
+        },
+        "EMAIL": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        },
+        "PERSON": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 5,
+          "expected": 5,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "expected": 2,
+          "detected": 2
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "PERSON",
+          "value": "張博鈞"
+        },
+        {
+          "type": "PERSON",
+          "value": "Po-Chun Chang"
+        },
+        {
+          "type": "PERSON",
+          "value": "山田太郎"
+        },
+        {
+          "type": "PERSON",
+          "value": "林佳瑩"
+        },
+        {
+          "type": "PERSON",
+          "value": "Chia-Ying Lin"
+        },
+        {
+          "type": "PHONE",
+          "value": "+886-3-563-6688"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "大阪市北区中之島3-3-3"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "0123456"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "佐藤様"
+        },
+        {
+          "type": "PERSON",
+          "value": "張博鈞 (Po-Chun Chang)"
+        },
+        {
+          "type": "PERSON",
+          "value": "林佳瑩 (Chia-Ying Lin)"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "三菱UFJ銀行 梅田支店 普通 0123456\n金額：JPY 15,800,000（税込）"
+        },
+        {
+          "type": "PHONE",
+          "value": "+886-3-563-6688 ext 12345"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "株式会社山田商会 経理部 山田太郎 様"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "〒530-0005 大阪市北区中之島3-3-3 中之島三井ビル 10F"
+        }
+      ]
+    },
+    {
+      "id": "multi_sg_mixed",
+      "group": "MULTI",
+      "category": "多語言—新加坡中英馬來混合",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 461,
+      "pii_expected_unique": 10,
+      "pii_detected_total": 10,
+      "inference_ms": 1886.7,
+      "chars_per_ms": 0.24,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "fp_rate": 0.004338,
+      "tp": 8,
+      "fp": 2,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PERSON": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "expected": 2,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ADDRESS",
+          "value": "1 Raffles Place #28-02"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "201812345K"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "Alamak"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "1 Raffles Place #28-02 One Raffles Place S048616"
+        }
+      ]
+    },
+    {
+      "id": "multi_sg_mixed",
+      "group": "MULTI",
+      "category": "多語言—新加坡中英馬來混合",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 461,
+      "pii_expected_unique": 10,
+      "pii_detected_total": 10,
+      "inference_ms": 1807.6,
+      "chars_per_ms": 0.26,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "fp_rate": 0.004338,
+      "tp": 8,
+      "fp": 2,
+      "fn": 2,
+      "per_type": {
+        "ACCOUNT": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "expected": 2,
+          "detected": 1
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "expected": 1,
+          "detected": 1
+        },
+        "EMAIL": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "expected": 2,
+          "detected": 2
+        },
+        "PERSON": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "expected": 2,
+          "detected": 3
+        },
+        "PHONE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected": 3,
+          "detected": 3
+        }
+      },
+      "false_negatives": [
+        {
+          "type": "ADDRESS",
+          "value": "1 Raffles Place #28-02"
+        },
+        {
+          "type": "ACCOUNT",
+          "value": "201812345K"
+        }
+      ],
+      "false_positives": [
+        {
+          "type": "PERSON",
+          "value": "Alamak"
+        },
+        {
+          "type": "ADDRESS",
+          "value": "1 Raffles Place #28-02 One Raffles Place S048616"
+        }
+      ]
+    },
+    {
+      "id": "neg_tech_discussion",
+      "group": "NEGATIVE",
+      "category": "無 PII—技術討論",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 290,
+      "pii_expected_unique": 0,
+      "pii_detected_total": 0,
+      "inference_ms": 1669.9,
+      "chars_per_ms": 0.17,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {},
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "neg_tech_discussion",
+      "group": "NEGATIVE",
+      "category": "無 PII—技術討論",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 290,
+      "pii_expected_unique": 0,
+      "pii_detected_total": 0,
+      "inference_ms": 1678.3,
+      "chars_per_ms": 0.17,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {},
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "neg_weather_chat",
+      "group": "NEGATIVE",
+      "category": "無 PII—天氣閒聊",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 98,
+      "pii_expected_unique": 0,
+      "pii_detected_total": 0,
+      "inference_ms": 1089.8,
+      "chars_per_ms": 0.09,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {},
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "neg_weather_chat",
+      "group": "NEGATIVE",
+      "category": "無 PII—天氣閒聊",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 98,
+      "pii_expected_unique": 0,
+      "pii_detected_total": 0,
+      "inference_ms": 1084.8,
+      "chars_per_ms": 0.09,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {},
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "neg_meeting_scheduling",
+      "group": "NEGATIVE",
+      "category": "無 PII—會議安排",
+      "language": "English",
+      "run_index": 0,
+      "text_length": 273,
+      "pii_expected_unique": 0,
+      "pii_detected_total": 0,
+      "inference_ms": 849.8,
+      "chars_per_ms": 0.32,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {},
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "neg_meeting_scheduling",
+      "group": "NEGATIVE",
+      "category": "無 PII—會議安排",
+      "language": "English",
+      "run_index": 1,
+      "text_length": 273,
+      "pii_expected_unique": 0,
+      "pii_detected_total": 0,
+      "inference_ms": 829.8,
+      "chars_per_ms": 0.33,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {},
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "neg_code_review",
+      "group": "NEGATIVE",
+      "category": "無 PII—程式碼審查",
+      "language": "中英混雜",
+      "run_index": 0,
+      "text_length": 368,
+      "pii_expected_unique": 0,
+      "pii_detected_total": 0,
+      "inference_ms": 997.7,
+      "chars_per_ms": 0.37,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {},
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "neg_code_review",
+      "group": "NEGATIVE",
+      "category": "無 PII—程式碼審查",
+      "language": "中英混雜",
+      "run_index": 1,
+      "text_length": 368,
+      "pii_expected_unique": 0,
+      "pii_detected_total": 0,
+      "inference_ms": 1018.9,
+      "chars_per_ms": 0.36,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {},
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "neg_product_feedback",
+      "group": "NEGATIVE",
+      "category": "無 PII—產品回饋",
+      "language": "中文",
+      "run_index": 0,
+      "text_length": 157,
+      "pii_expected_unique": 0,
+      "pii_detected_total": 0,
+      "inference_ms": 1091.8,
+      "chars_per_ms": 0.14,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {},
+      "false_negatives": [],
+      "false_positives": []
+    },
+    {
+      "id": "neg_product_feedback",
+      "group": "NEGATIVE",
+      "category": "無 PII—產品回饋",
+      "language": "中文",
+      "run_index": 1,
+      "text_length": 157,
+      "pii_expected_unique": 0,
+      "pii_detected_total": 0,
+      "inference_ms": 1091.6,
+      "chars_per_ms": 0.14,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fp_rate": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "per_type": {},
+      "false_negatives": [],
+      "false_positives": []
+    }
+  ],
+  "dataset_stats": {
+    "total_cases": 47,
+    "total_chars": 17329,
+    "total_expected_pii": 351,
+    "groups": {
+      "SHORT": {
+        "count": 10,
+        "total_chars": 762,
+        "avg_chars": 76,
+        "total_expected_pii": 33,
+        "languages": [
+          "English",
+          "中文",
+          "中英混雜"
+        ]
+      },
+      "MEDIUM": {
+        "count": 10,
+        "total_chars": 3271,
+        "avg_chars": 327,
+        "total_expected_pii": 95,
+        "languages": [
+          "English",
+          "中文",
+          "中英日混雜",
+          "中英混雜"
+        ]
+      },
+      "LONG": {
+        "count": 5,
+        "total_chars": 5945,
+        "avg_chars": 1189,
+        "total_expected_pii": 90,
+        "languages": [
+          "English",
+          "中文",
+          "中英混雜"
+        ]
+      },
+      "ORAL": {
+        "count": 8,
+        "total_chars": 2165,
+        "avg_chars": 270,
+        "total_expected_pii": 44,
+        "languages": [
+          "中文",
+          "中英混雜"
+        ]
+      },
+      "STRUCT": {
+        "count": 5,
+        "total_chars": 2650,
+        "avg_chars": 530,
+        "total_expected_pii": 49,
+        "languages": [
+          "English"
+        ]
+      },
+      "MULTI": {
+        "count": 4,
+        "total_chars": 1350,
+        "avg_chars": 337,
+        "total_expected_pii": 40,
+        "languages": [
+          "中英日混雜",
+          "中英混雜",
+          "日文",
+          "韓文"
+        ]
+      },
+      "NEGATIVE": {
+        "count": 5,
+        "total_chars": 1186,
+        "avg_chars": 237,
+        "total_expected_pii": 0,
+        "languages": [
+          "English",
+          "中文",
+          "中英混雜"
+        ]
+      }
+    }
+  }
+}

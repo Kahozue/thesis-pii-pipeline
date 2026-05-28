@@ -1,0 +1,8 @@
+test_type,workers,avg_qps,avg_latency_ms,avg_p95_latency_ms
+single_text,1,0.34,2939.9,9569.4
+single_text,2,0.36,5405.2,11504.7
+single_text,4,0.3,13106.6,20725.5
+single_text,8,0.2,32904.2,51147.2
+batch_1,N/A,1.72,1898.2,
+batch_5,N/A,1.69,10056.7,
+batch_10,N/A,1.7,17889.0,

@@ -1,0 +1,34 @@
+metric,Oracle_A1_Flex_ARM_Neoverse_N1_4C,Apple_M3_8P8L_24GB,unit
+CPU,ARM Neoverse N1 (impl=0x41 variant=0x3 arch=8),Apple M3,
+CPU Cores,4P/4L,8P/8L,
+RAM Total,22.4,24.0,GB
+Load Time,11.786,1.234,seconds
+VMS Delta,4481,600,MB
+RSS Delta,681,168,MB
+Cold Inference,7635,6384,ms
+Warm Inference Avg,869,960,ms
+Cold/Warm Ratio,8.78,6.65,x
+Char-Time R^2,0.8475,0.7807,
+Per 1000 chars,8662,9542,ms
+Overall F1,0.6627,0.6657,
+Negative FP rate,0.0,0.0,
+F1_短對話 baseline,0.8254,0.8254,
+Time_短對話 baseline,780,854,ms
+F1_中長對話,0.6597,0.6597,
+Time_中長對話,3266,3316,ms
+F1_長文本壓力測試,0.6509,0.6627,
+Time_長文本壓力測試,11626,13066,ms
+F1_口語非正式,0.7586,0.7586,
+Time_口語非正式,2705,3023,ms
+F1_結構化格式,0.5349,0.5349,
+Time_結構化格式,4276,4696,ms
+F1_多語言混雜,0.5946,0.5946,
+Time_多語言混雜,3194,3231,ms
+F1_無 PII 對照組,1.0,1.0,
+Time_無 PII 對照組,1779,1140,ms
+F1_English,0.6826,0.6826,
+F1_中文,0.7225,0.733,
+F1_中英日混雜,0.5283,0.5283,
+F1_中英混雜,0.6379,0.6379,
+F1_日文,0.4,0.4,
+F1_韓文,0.7059,0.7059,

@@ -1,0 +1,634 @@
+{
+  "hardware": {
+    "cpu": "Apple M3",
+    "os": "Darwin 25.4.0 (Darwin Kernel Version 25.4.0: Thu Mar 19 19:32:59 PDT 2026; root:xnu-12377.101.15~1/RELEASE_ARM64_T8122)",
+    "cpu_cores": "8P/8L",
+    "ram_total_gb": 24.0,
+    "apple_silicon": true
+  },
+  "headline": {
+    "模型": "OpenAI Privacy Filter (opf) — 1.5B params, BF16, Apache 2.0",
+    "測試案例數": 47,
+    "總字數": 17329,
+    "預期 PII 總數": 351,
+    "模型載入時間_s": 1.234,
+    "Proc_VMS_delta_MB": 599.7,
+    "Proc_RSS_delta_MB": 168.0,
+    "Proc_USS_delta_MB": 131.3,
+    "System_RAM_delta_GB": 0.1,
+    "External_iStats_obs_GB": "~3.9 GB (mmap weights + PyTorch runtime, 最可靠指標)",
+    "Cold推論_ms": 6384.4,
+    "Warm推論_avg_ms": 960.4,
+    "Cold_Warm比例": 6.65,
+    "整體Precision": 0.6991,
+    "整體Recall": 0.6353,
+    "整體F1": 0.6657,
+    "Negative_FP_rate": 0.0,
+    "字數時間R²": 0.7807,
+    "每千字推論時間_ms": 9541.5
+  },
+  "load": {
+    "load_time_seconds": 1.234,
+    "proc_rss_before_mb": 35.4,
+    "proc_rss_after_mb": 203.5,
+    "proc_rss_delta_mb": 168.0,
+    "proc_vms_before_mb": 431856.7,
+    "proc_vms_after_mb": 432456.4,
+    "proc_vms_delta_mb": 599.7,
+    "proc_uss_before_mb": 24.7,
+    "proc_uss_after_mb": 156.0,
+    "proc_uss_delta_mb": 131.3,
+    "system_ram_total_gb": 24.0,
+    "system_ram_used_before_gb": 9.6,
+    "system_ram_used_after_gb": 9.7,
+    "system_ram_delta_gb": 0.1,
+    "system_ram_percent_before": 52.2,
+    "system_ram_percent_after": 52.6,
+    "_note": "Process RSS/VMS undercounts memory on macOS because OPF uses memory-mapped files (mmap) for model weights. The system-level RAM delta (system_ram_delta_gb) is the most reliable metric. External system monitor (iStats/Activity Monitor) typically shows ~3.5-4.0 GB increase for the full 1.5B BF16 model + PyTorch runtime."
+  },
+  "warmup": {
+    "warmup_iterations": 10,
+    "cold_ms": 6384.4,
+    "warm_avg_ms": 960.4,
+    "warm_std_ms": 26.3,
+    "cold_warm_ratio": 6.65,
+    "all_times_ms": [
+      6384.4,
+      937.8,
+      959.0,
+      1007.3,
+      995.2,
+      940.8,
+      938.9,
+      950.8,
+      951.2,
+      940.0
+    ]
+  },
+  "per_group": {
+    "LONG": {
+      "name": "長文本壓力測試",
+      "count": 5,
+      "avg_chars": 1189,
+      "avg_inference_ms": 13065.6,
+      "min_inference_ms": 9085.0,
+      "max_inference_ms": 17322.0,
+      "total_expected_pii": 90,
+      "total_detected_pii": 87,
+      "precision": 0.7089,
+      "recall": 0.6222,
+      "f1": 0.6627,
+      "tp": 56,
+      "fp": 23,
+      "fn": 34,
+      "chars_per_ms": 0.09
+    },
+    "MEDIUM": {
+      "name": "中長對話",
+      "count": 10,
+      "avg_chars": 327,
+      "avg_inference_ms": 3315.5,
+      "min_inference_ms": 2242.7,
+      "max_inference_ms": 4200.0,
+      "total_expected_pii": 95,
+      "total_detected_pii": 107,
+      "precision": 0.6562,
+      "recall": 0.6632,
+      "f1": 0.6597,
+      "tp": 63,
+      "fp": 33,
+      "fn": 32,
+      "chars_per_ms": 0.1
+    },
+    "MULTI": {
+      "name": "多語言混雜",
+      "count": 4,
+      "avg_chars": 337,
+      "avg_inference_ms": 3231.1,
+      "min_inference_ms": 1886.7,
+      "max_inference_ms": 5859.1,
+      "total_expected_pii": 40,
+      "total_detected_pii": 34,
+      "precision": 0.6471,
+      "recall": 0.55,
+      "f1": 0.5946,
+      "tp": 22,
+      "fp": 12,
+      "fn": 18,
+      "chars_per_ms": 0.1
+    },
+    "NEGATIVE": {
+      "name": "無 PII 對照組",
+      "count": 5,
+      "avg_chars": 237,
+      "avg_inference_ms": 1139.8,
+      "min_inference_ms": 849.8,
+      "max_inference_ms": 1669.9,
+      "total_expected_pii": 0,
+      "total_detected_pii": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "chars_per_ms": 0.21
+    },
+    "ORAL": {
+      "name": "口語非正式",
+      "count": 8,
+      "avg_chars": 270,
+      "avg_inference_ms": 3023.1,
+      "min_inference_ms": 1569.5,
+      "max_inference_ms": 4809.1,
+      "total_expected_pii": 44,
+      "total_detected_pii": 49,
+      "precision": 0.7674,
+      "recall": 0.75,
+      "f1": 0.7586,
+      "tp": 33,
+      "fp": 10,
+      "fn": 11,
+      "chars_per_ms": 0.09
+    },
+    "SHORT": {
+      "name": "短對話 baseline",
+      "count": 10,
+      "avg_chars": 76,
+      "avg_inference_ms": 854.4,
+      "min_inference_ms": 533.4,
+      "max_inference_ms": 1215.3,
+      "total_expected_pii": 33,
+      "total_detected_pii": 30,
+      "precision": 0.8667,
+      "recall": 0.7879,
+      "f1": 0.8254,
+      "tp": 26,
+      "fp": 4,
+      "fn": 7,
+      "chars_per_ms": 0.09
+    },
+    "STRUCT": {
+      "name": "結構化格式",
+      "count": 5,
+      "avg_chars": 530,
+      "avg_inference_ms": 4696.5,
+      "min_inference_ms": 2928.8,
+      "max_inference_ms": 6457.3,
+      "total_expected_pii": 49,
+      "total_detected_pii": 38,
+      "precision": 0.6216,
+      "recall": 0.4694,
+      "f1": 0.5349,
+      "tp": 23,
+      "fp": 14,
+      "fn": 26,
+      "chars_per_ms": 0.11
+    }
+  },
+  "per_language": {
+    "中文": {
+      "count": 16,
+      "precision": 0.7368,
+      "recall": 0.7292,
+      "f1": 0.733,
+      "avg_inference_ms": 3632.4
+    },
+    "English": {
+      "count": 12,
+      "precision": 0.75,
+      "recall": 0.6264,
+      "f1": 0.6826,
+      "avg_inference_ms": 3207.1
+    },
+    "中英混雜": {
+      "count": 15,
+      "precision": 0.6667,
+      "recall": 0.6116,
+      "f1": 0.6379,
+      "avg_inference_ms": 4161.8
+    },
+    "中英日混雜": {
+      "count": 2,
+      "precision": 0.5385,
+      "recall": 0.5185,
+      "f1": 0.5283,
+      "avg_inference_ms": 4554.9
+    },
+    "日文": {
+      "count": 1,
+      "precision": 0.6667,
+      "recall": 0.2857,
+      "f1": 0.4,
+      "avg_inference_ms": 2319.1
+    },
+    "韓文": {
+      "count": 1,
+      "precision": 0.75,
+      "recall": 0.6667,
+      "f1": 0.7059,
+      "avg_inference_ms": 2859.5
+    }
+  },
+  "char_time_buckets": {
+    "0-200 chars": {
+      "count": 18,
+      "avg_ms": 1449.5,
+      "min_ms": 533.4,
+      "max_ms": 3465.4
+    },
+    "200-500 chars": {
+      "count": 21,
+      "avg_ms": 3167.3,
+      "min_ms": 849.8,
+      "max_ms": 5859.1
+    },
+    "500-1000 chars": {
+      "count": 5,
+      "avg_ms": 8407.5,
+      "min_ms": 4255.3,
+      "max_ms": 17322.0
+    },
+    "1000-3000 chars": {
+      "count": 3,
+      "avg_ms": 12892.2,
+      "min_ms": 9085.0,
+      "max_ms": 17021.6
+    }
+  },
+  "char_time_regression": {
+    "slope_ms_per_char": 9.5415,
+    "intercept_ms": 169.6,
+    "r_squared": 0.7807,
+    "estimated_1000char_ms": 9711.2
+  },
+  "negative_control": {
+    "total_fp": 0,
+    "total_chars": 1186,
+    "fp_per_1k_chars": 0.0
+  },
+  "top_false_negatives": [
+    {
+      "case_id": "short_zh_address",
+      "group": "SHORT",
+      "type": "ACCOUNT",
+      "value": "12345678"
+    },
+    {
+      "case_id": "short_zh_mixed_contact",
+      "group": "SHORT",
+      "type": "PERSON",
+      "value": "Jason"
+    },
+    {
+      "case_id": "short_zh_mixed_contact",
+      "group": "SHORT",
+      "type": "ACCOUNT",
+      "value": "jasonwang_tw"
+    },
+    {
+      "case_id": "short_zh_bank",
+      "group": "SHORT",
+      "type": "PERSON",
+      "value": "蔡小華"
+    },
+    {
+      "case_id": "short_zh_bank",
+      "group": "SHORT",
+      "type": "ACCOUNT",
+      "value": "808-1234-5678-9012"
+    },
+    {
+      "case_id": "short_zh_instant_msg",
+      "group": "SHORT",
+      "type": "PERSON",
+      "value": "阿明"
+    },
+    {
+      "case_id": "short_zh_instant_msg",
+      "group": "SHORT",
+      "type": "ACCOUNT",
+      "value": "700-00212345678901"
+    },
+    {
+      "case_id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Kevin 陳彥廷"
+    },
+    {
+      "case_id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "type": "SECRET",
+      "value": "Tg7!kQw2#mZ9"
+    },
+    {
+      "case_id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "type": "ACCOUNT",
+      "value": "AKIAY3KLM9XPQR72WSVT"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "葉宛青"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "林映潔"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "EMAIL",
+      "value": "wan-ching.yeh@acme-tw.com"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "PHONE",
+      "value": "+886-2-2709-3300"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "ADDRESS",
+      "value": "台北市大安區仁愛路四段 300 號"
+    },
+    {
+      "case_id": "med_hr_credential_harvest",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Marcus"
+    },
+    {
+      "case_id": "med_hr_credential_harvest",
+      "group": "MEDIUM",
+      "type": "DATE",
+      "value": "5/8"
+    },
+    {
+      "case_id": "med_insurance_pretexting",
+      "group": "MEDIUM",
+      "type": "DATE",
+      "value": "2026-04-29"
+    },
+    {
+      "case_id": "med_insurance_pretexting",
+      "group": "MEDIUM",
+      "type": "ACCOUNT",
+      "value": "LF-2024-887432"
+    },
+    {
+      "case_id": "med_slack_payment_leak",
+      "group": "MEDIUM",
+      "type": "DATE",
+      "value": "2026-04-28"
+    },
+    {
+      "case_id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "田中浩二"
+    },
+    {
+      "case_id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Tanaka Koji"
+    },
+    {
+      "case_id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "type": "ADDRESS",
+      "value": "大阪市北区梅田2丁目4-9"
+    },
+    {
+      "case_id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "type": "DATE",
+      "value": "5月14日"
+    },
+    {
+      "case_id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "type": "ACCOUNT",
+      "value": "tanakakoji_ntc"
+    },
+    {
+      "case_id": "med_incident_response",
+      "group": "MEDIUM",
+      "type": "ACCOUNT",
+      "value": "AKIAWXYZ1234ABCDEFGH"
+    },
+    {
+      "case_id": "med_incident_response",
+      "group": "MEDIUM",
+      "type": "SECRET",
+      "value": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYz3+Qk"
+    },
+    {
+      "case_id": "med_meeting_privacy_violation",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Kevin"
+    },
+    {
+      "case_id": "med_meeting_privacy_violation",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "小雯"
+    },
+    {
+      "case_id": "med_meeting_privacy_violation",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Ananya Patel"
+    }
+  ],
+  "top_false_positives": [
+    {
+      "case_id": "short_zh_address",
+      "group": "SHORT",
+      "type": "PHONE",
+      "value": "12345678"
+    },
+    {
+      "case_id": "short_zh_mixed_contact",
+      "group": "SHORT",
+      "type": "PERSON",
+      "value": "jasonwang_tw"
+    },
+    {
+      "case_id": "short_zh_bank",
+      "group": "SHORT",
+      "type": "ACCOUNT",
+      "value": "玉山銀行 808-1234-5678-9012"
+    },
+    {
+      "case_id": "short_zh_instant_msg",
+      "group": "SHORT",
+      "type": "PHONE",
+      "value": "700-00212345678901"
+    },
+    {
+      "case_id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Ryan"
+    },
+    {
+      "case_id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Kevin"
+    },
+    {
+      "case_id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Kevin"
+    },
+    {
+      "case_id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Kevin"
+    },
+    {
+      "case_id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "type": "SECRET",
+      "value": "=Tg7!kQw2#mZ9"
+    },
+    {
+      "case_id": "med_teams_credential_leak",
+      "group": "MEDIUM",
+      "type": "SECRET",
+      "value": "AKIAY3KLM9XPQR72WSVT"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "EMAIL",
+      "value": "葉宛青 <wan-ching.yeh@acme-tw.com"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "James"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Jessica"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "林映潔 (Jessica Lin)"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "PHONE",
+      "value": "+886-2-2709-3300 ext 214"
+    },
+    {
+      "case_id": "med_email_spear_phishing",
+      "group": "MEDIUM",
+      "type": "ADDRESS",
+      "value": "台北市大安區仁愛路四段 300 號 直接搭 Uber"
+    },
+    {
+      "case_id": "med_insurance_pretexting",
+      "group": "MEDIUM",
+      "type": "DATE",
+      "value": "2026-04-29 14:22"
+    },
+    {
+      "case_id": "med_insurance_pretexting",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Amy"
+    },
+    {
+      "case_id": "med_insurance_pretexting",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Amy"
+    },
+    {
+      "case_id": "med_insurance_pretexting",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Amy"
+    },
+    {
+      "case_id": "med_insurance_pretexting",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "Amy"
+    },
+    {
+      "case_id": "med_insurance_pretexting",
+      "group": "MEDIUM",
+      "type": "ACCOUNT",
+      "value": "保單 LF-2024-887432"
+    },
+    {
+      "case_id": "med_slack_payment_leak",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "@daniel"
+    },
+    {
+      "case_id": "med_slack_payment_leak",
+      "group": "MEDIUM",
+      "type": "DATE",
+      "value": "2026-04-28 23:41 UTC"
+    },
+    {
+      "case_id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "田中浩二（Tanaka Koji）"
+    },
+    {
+      "case_id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "田中先生 prefer LINE"
+    },
+    {
+      "case_id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "tanakakoji_ntc"
+    },
+    {
+      "case_id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "type": "PERSON",
+      "value": "5月14日飛台北"
+    },
+    {
+      "case_id": "med_crm_multilang",
+      "group": "MEDIUM",
+      "type": "ADDRESS",
+      "value": "大阪市北区梅田2丁目4-9 ブリーゼタワー 18F"
+    },
+    {
+      "case_id": "med_incident_response",
+      "group": "MEDIUM",
+      "type": "EMAIL",
+      "value": "it-security@corp.com"
+    }
+  ]
+}

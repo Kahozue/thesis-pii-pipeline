@@ -1,0 +1,445 @@
+{
+  "headline_stats": {
+    "模型": "OpenAI Privacy Filter (opf)",
+    "授權": "Apache 2.0",
+    "參數量": "1.5B total / 50M active",
+    "Context": "128K tokens",
+    "宣稱 F1": "97%",
+    "實際 Micro F1": "71.43%",
+    "實際 Macro F1": "74.08%",
+    "平均延遲": "2025 ms",
+    "測試案例數": 10,
+    "預期 PII 總數": 114,
+    "實際偵測 PII 總數": 116
+  },
+  "per_type_summary": {
+    "ACCOUNT": {
+      "precision": 0.7273,
+      "recall": 0.5,
+      "f1": 0.5926,
+      "tp": 8,
+      "fp": 3,
+      "fn": 8,
+      "expected_count": 16,
+      "detected_count": 11
+    },
+    "ADDRESS": {
+      "precision": 0.375,
+      "recall": 0.5,
+      "f1": 0.4286,
+      "tp": 3,
+      "fp": 5,
+      "fn": 3,
+      "expected_count": 6,
+      "detected_count": 8
+    },
+    "DATE": {
+      "precision": 0.6923,
+      "recall": 0.5625,
+      "f1": 0.6207,
+      "tp": 9,
+      "fp": 4,
+      "fn": 7,
+      "expected_count": 16,
+      "detected_count": 13
+    },
+    "EMAIL": {
+      "precision": 0.9412,
+      "recall": 0.8889,
+      "f1": 0.9143,
+      "tp": 16,
+      "fp": 1,
+      "fn": 2,
+      "expected_count": 18,
+      "detected_count": 17
+    },
+    "PERSON": {
+      "precision": 0.6364,
+      "recall": 0.7,
+      "f1": 0.6667,
+      "tp": 21,
+      "fp": 12,
+      "fn": 9,
+      "expected_count": 30,
+      "detected_count": 33
+    },
+    "PHONE": {
+      "precision": 0.9167,
+      "recall": 1.0,
+      "f1": 0.9565,
+      "tp": 11,
+      "fp": 1,
+      "fn": 0,
+      "expected_count": 11,
+      "detected_count": 12
+    },
+    "SECRET": {
+      "precision": 0.75,
+      "recall": 0.6667,
+      "f1": 0.7059,
+      "tp": 6,
+      "fp": 2,
+      "fn": 3,
+      "expected_count": 9,
+      "detected_count": 8
+    },
+    "URL": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "expected_count": 1,
+      "detected_count": 1
+    }
+  },
+  "per_language": {
+    "中英混雜": {
+      "precision": 0.7544,
+      "recall": 0.6825,
+      "f1": 0.7167
+    },
+    "中文": {
+      "precision": 0.65,
+      "recall": 0.7222,
+      "f1": 0.6842
+    },
+    "中英日混雜": {
+      "precision": 0.75,
+      "recall": 0.6923,
+      "f1": 0.72
+    },
+    "English": {
+      "precision": 0.7143,
+      "recall": 0.7692,
+      "f1": 0.7407
+    }
+  },
+  "top_false_negatives": [
+    {
+      "type": "PERSON",
+      "value": "Kevin 陳彥廷",
+      "case_id": "eng_teams_deploy"
+    },
+    {
+      "type": "PERSON",
+      "value": "Kevin 陳彥廷",
+      "case_id": "eng_teams_deploy"
+    },
+    {
+      "type": "PERSON",
+      "value": "Kevin 陳彥廷",
+      "case_id": "eng_teams_deploy"
+    },
+    {
+      "type": "SECRET",
+      "value": "db_pass=Tg7!kQw2#mZ9",
+      "case_id": "eng_teams_deploy"
+    },
+    {
+      "type": "PERSON",
+      "value": "林映潔",
+      "case_id": "biz_email_crosslang"
+    },
+    {
+      "type": "ADDRESS",
+      "value": "台北市大安區仁愛路四段 300 號",
+      "case_id": "biz_email_crosslang"
+    },
+    {
+      "type": "PERSON",
+      "value": "Marcus",
+      "case_id": "hr_onboarding"
+    },
+    {
+      "type": "DATE",
+      "value": "5/8",
+      "case_id": "hr_onboarding"
+    },
+    {
+      "type": "DATE",
+      "value": "2026-04-29",
+      "case_id": "customer_service_insurance"
+    },
+    {
+      "type": "ACCOUNT",
+      "value": "LF-2024-887432",
+      "case_id": "customer_service_insurance"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sophie",
+      "case_id": "slack_vendor_integration"
+    },
+    {
+      "type": "DATE",
+      "value": "2026-04-28 23:41",
+      "case_id": "slack_vendor_integration"
+    },
+    {
+      "type": "PERSON",
+      "value": "田中浩二",
+      "case_id": "crm_crosslang"
+    },
+    {
+      "type": "PERSON",
+      "value": "Tanaka Koji",
+      "case_id": "crm_crosslang"
+    },
+    {
+      "type": "DATE",
+      "value": "5月14日",
+      "case_id": "crm_crosslang"
+    },
+    {
+      "type": "ACCOUNT",
+      "value": "tanakakoji_ntc",
+      "case_id": "crm_crosslang"
+    },
+    {
+      "type": "EMAIL",
+      "value": "ciso@corp.com",
+      "case_id": "infosec_incident_report"
+    },
+    {
+      "type": "EMAIL",
+      "value": "legal@corp.com",
+      "case_id": "infosec_incident_report"
+    },
+    {
+      "type": "ACCOUNT",
+      "value": "AKIAWXYZ1234ABCDEFGH",
+      "case_id": "infosec_incident_report"
+    },
+    {
+      "type": "ACCOUNT",
+      "value": "38.242.101.77",
+      "case_id": "infosec_incident_report"
+    }
+  ],
+  "top_false_positives": [
+    {
+      "type": "SECRET",
+      "value": "=Tg7!kQw2#mZ9",
+      "case_id": "eng_teams_deploy"
+    },
+    {
+      "type": "PERSON",
+      "value": "James",
+      "case_id": "biz_email_crosslang"
+    },
+    {
+      "type": "PERSON",
+      "value": "Jessica",
+      "case_id": "biz_email_crosslang"
+    },
+    {
+      "type": "PERSON",
+      "value": "林映潔 (Jessica Lin)",
+      "case_id": "biz_email_crosslang"
+    },
+    {
+      "type": "ADDRESS",
+      "value": "台北市大安區仁愛路四段 300 號 直接搭 Uber",
+      "case_id": "biz_email_crosslang"
+    },
+    {
+      "type": "DATE",
+      "value": "2026-04-29 14:22",
+      "case_id": "customer_service_insurance"
+    },
+    {
+      "type": "PERSON",
+      "value": "Amy",
+      "case_id": "customer_service_insurance"
+    },
+    {
+      "type": "PERSON",
+      "value": "Amy",
+      "case_id": "customer_service_insurance"
+    },
+    {
+      "type": "PERSON",
+      "value": "Amy",
+      "case_id": "customer_service_insurance"
+    },
+    {
+      "type": "PERSON",
+      "value": "謝謝",
+      "case_id": "customer_service_insurance"
+    },
+    {
+      "type": "PERSON",
+      "value": "Amy",
+      "case_id": "customer_service_insurance"
+    },
+    {
+      "type": "ACCOUNT",
+      "value": "保單 LF-2024-887432",
+      "case_id": "customer_service_insurance"
+    },
+    {
+      "type": "PERSON",
+      "value": "@daniel",
+      "case_id": "slack_vendor_integration"
+    },
+    {
+      "type": "DATE",
+      "value": "2026-04-28 23:41 UTC",
+      "case_id": "slack_vendor_integration"
+    },
+    {
+      "type": "PERSON",
+      "value": "田中浩二（Tanaka Koji）",
+      "case_id": "crm_crosslang"
+    },
+    {
+      "type": "PERSON",
+      "value": "田中先生",
+      "case_id": "crm_crosslang"
+    },
+    {
+      "type": "PERSON",
+      "value": "tanakakoji_ntc",
+      "case_id": "crm_crosslang"
+    },
+    {
+      "type": "EMAIL",
+      "value": "ciso@corp.com, legal@corp.com",
+      "case_id": "infosec_incident_report"
+    },
+    {
+      "type": "SECRET",
+      "value": "AKIAWXYZ1234ABCDEFGH\n  - AWS_SECRET_ACCESS_KEY = wJalrXUtnFEMI/K7MDENG/bPxRfiCYz3+Qk",
+      "case_id": "infosec_incident_report"
+    },
+    {
+      "type": "DATE",
+      "value": "5/7 10am",
+      "case_id": "meeting_notes_casual"
+    }
+  ],
+  "cases": [
+    {
+      "id": "eng_teams_deploy",
+      "category": "社交工程—憑證洩漏",
+      "sub_category": "內部通訊平台的明文機敏資訊洩漏",
+      "language": "中英混雜",
+      "threat_type": "Credential Leak / Insider Threat",
+      "text_length": 364,
+      "pii_expected": 10,
+      "pii_detected": 10,
+      "latency_ms": 3742.8,
+      "micro_f1": 0.8
+    },
+    {
+      "id": "biz_email_crosslang",
+      "category": "社交工程—跨國業務郵件",
+      "sub_category": "冒充客戶身份的魚叉式釣魚前置郵件",
+      "language": "中英混雜",
+      "threat_type": "Spear Phishing / Identity Spoofing",
+      "text_length": 418,
+      "pii_expected": 12,
+      "pii_detected": 13,
+      "latency_ms": 1846.7,
+      "micro_f1": 0.75
+    },
+    {
+      "id": "hr_onboarding",
+      "category": "社交工程—HR 偽装入職通知",
+      "sub_category": "偽裝 HR 騙取新進員工個資與憑證",
+      "language": "中英混雜",
+      "threat_type": "Credential Harvesting / Impersonation",
+      "text_length": 297,
+      "pii_expected": 10,
+      "pii_detected": 8,
+      "latency_ms": 1789.5,
+      "micro_f1": 0.8889
+    },
+    {
+      "id": "customer_service_insurance",
+      "category": "社交工程—客服對話（保險理賠）",
+      "sub_category": "攻擊者偽裝客戶蒐集保單與身分資訊",
+      "language": "中文",
+      "threat_type": "Pretexting / Information Elicitation",
+      "text_length": 297,
+      "pii_expected": 7,
+      "pii_detected": 12,
+      "latency_ms": 1848.6,
+      "micro_f1": 0.625
+    },
+    {
+      "id": "slack_vendor_integration",
+      "category": "社交工程—Slack 工程團隊",
+      "sub_category": "第三方 vendor 整合中的支付資訊與憑證暴露",
+      "language": "中英混雜",
+      "threat_type": "Credential Leak / Payment Data Exposure",
+      "text_length": 494,
+      "pii_expected": 11,
+      "pii_detected": 11,
+      "latency_ms": 2219.3,
+      "micro_f1": 0.7143
+    },
+    {
+      "id": "crm_crosslang",
+      "category": "社交工程—業務 CRM 備忘",
+      "sub_category": "中日混雜客戶拜訪紀錄，含信用卡與聯絡資訊",
+      "language": "中英日混雜",
+      "threat_type": "Payment Data Exposure / Privacy Violation",
+      "text_length": 366,
+      "pii_expected": 13,
+      "pii_detected": 12,
+      "latency_ms": 1885.7,
+      "micro_f1": 0.72
+    },
+    {
+      "id": "infosec_incident_report",
+      "category": "社交工程—資安事件回報",
+      "sub_category": "GitHub 公開 repo 憑證洩漏事件通報",
+      "language": "中英混雜",
+      "threat_type": "Credential Exposure / Incident Response",
+      "text_length": 498,
+      "pii_expected": 10,
+      "pii_detected": 7,
+      "latency_ms": 2286.4,
+      "micro_f1": 0.5
+    },
+    {
+      "id": "meeting_notes_casual",
+      "category": "社交工程—跨部門會議記錄",
+      "sub_category": "口語混搭的會議記錄，含有研究受訪者個資",
+      "language": "中英混雜",
+      "threat_type": "Privacy Violation / Data Mishandling",
+      "text_length": 446,
+      "pii_expected": 17,
+      "pii_detected": 17,
+      "latency_ms": 2072.1,
+      "micro_f1": 0.6667
+    },
+    {
+      "id": "stress_dense_english",
+      "category": "壓力測試—英文高密度 PII",
+      "sub_category": "單一文本密集包含多類型 PII",
+      "language": "English",
+      "threat_type": "N/A (Benchmark)",
+      "text_length": 305,
+      "pii_expected": 13,
+      "pii_detected": 15,
+      "latency_ms": 1191.6,
+      "micro_f1": 0.7407
+    },
+    {
+      "id": "stress_dense_chinese",
+      "category": "壓力測試—中文高密度 PII",
+      "sub_category": "台灣常見個資格式密集測試",
+      "language": "中文",
+      "threat_type": "N/A (Benchmark)",
+      "text_length": 212,
+      "pii_expected": 11,
+      "pii_detected": 11,
+      "latency_ms": 1369.3,
+      "micro_f1": 0.7273
+    }
+  ]
+}

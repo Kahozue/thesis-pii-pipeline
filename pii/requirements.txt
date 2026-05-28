@@ -1,0 +1,6 @@
+opf @ git+https://github.com/openai/privacy-filter.git
+streamlit>=1.30
+fastapi>=0.109
+uvicorn>=0.27
+matplotlib>=3.8
+requests>=2.31

@@ -1,0 +1,671 @@
+{
+  "meta": {
+    "timestamp": "2026-05-05 10:26:30",
+    "api_base_url": "http://localhost:8505",
+    "request_timeout_s": 120
+  },
+  "single_text": [
+    {
+      "endpoint": "/api/v1/redact",
+      "config": {
+        "workers": 1,
+        "num_requests": 10
+      },
+      "text_breakdown": {
+        "short_cn_count": 3,
+        "short_en_count": 3,
+        "medium_teams_count": 2,
+        "long_count": 2
+      },
+      "wall_time_s": 50.054,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "qps": 0.2,
+      "latency_ms": {
+        "min": 608.9,
+        "max": 17205.3,
+        "avg": 5005.3,
+        "p50": 2265.2,
+        "p95": 17192.2,
+        "p99": 17202.7
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact",
+      "config": {
+        "workers": 1,
+        "num_requests": 20
+      },
+      "text_breakdown": {
+        "short_cn_count": 5,
+        "short_en_count": 5,
+        "medium_teams_count": 5,
+        "long_count": 5
+      },
+      "wall_time_s": 111.709,
+      "total_requests": 20,
+      "successful_requests": 20,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "qps": 0.18,
+      "latency_ms": {
+        "min": 608.9,
+        "max": 17172.2,
+        "avg": 5585.4,
+        "p50": 2252.3,
+        "p95": 17166.2,
+        "p99": 17171.0
+      },
+      "status_code_distribution": {
+        "200": 20
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact",
+      "config": {
+        "workers": 2,
+        "num_requests": 10
+      },
+      "text_breakdown": {
+        "short_cn_count": 3,
+        "short_en_count": 3,
+        "medium_teams_count": 2,
+        "long_count": 2
+      },
+      "wall_time_s": 45.763,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "qps": 0.22,
+      "latency_ms": {
+        "min": 694.4,
+        "max": 20915.2,
+        "avg": 9089.9,
+        "p50": 4441.7,
+        "p95": 20911.0,
+        "p99": 20914.4
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact",
+      "config": {
+        "workers": 2,
+        "num_requests": 20
+      },
+      "text_breakdown": {
+        "short_cn_count": 5,
+        "short_en_count": 5,
+        "medium_teams_count": 5,
+        "long_count": 5
+      },
+      "wall_time_s": 112.315,
+      "total_requests": 20,
+      "successful_requests": 20,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "qps": 0.18,
+      "latency_ms": {
+        "min": 693.1,
+        "max": 21067.5,
+        "avg": 10378.5,
+        "p50": 4476.0,
+        "p95": 21002.8,
+        "p99": 21054.6
+      },
+      "status_code_distribution": {
+        "200": 20
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact",
+      "config": {
+        "workers": 4,
+        "num_requests": 10
+      },
+      "text_breakdown": {
+        "short_cn_count": 3,
+        "short_en_count": 3,
+        "medium_teams_count": 2,
+        "long_count": 2
+      },
+      "wall_time_s": 45.944,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "qps": 0.22,
+      "latency_ms": {
+        "min": 5869.6,
+        "max": 22352.0,
+        "avg": 16342.3,
+        "p50": 18138.0,
+        "p95": 22324.1,
+        "p99": 22346.4
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact",
+      "config": {
+        "workers": 4,
+        "num_requests": 20
+      },
+      "text_breakdown": {
+        "short_cn_count": 5,
+        "short_en_count": 5,
+        "medium_teams_count": 5,
+        "long_count": 5
+      },
+      "wall_time_s": 111.766,
+      "total_requests": 20,
+      "successful_requests": 20,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "qps": 0.18,
+      "latency_ms": {
+        "min": 696.4,
+        "max": 22910.7,
+        "avg": 19367.6,
+        "p50": 22216.8,
+        "p95": 22844.5,
+        "p99": 22897.4
+      },
+      "status_code_distribution": {
+        "200": 20
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact",
+      "config": {
+        "workers": 8,
+        "num_requests": 10
+      },
+      "text_breakdown": {
+        "short_cn_count": 3,
+        "short_en_count": 3,
+        "medium_teams_count": 2,
+        "long_count": 2
+      },
+      "wall_time_s": 45.879,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "qps": 0.22,
+      "latency_ms": {
+        "min": 711.4,
+        "max": 44578.8,
+        "avg": 21773.7,
+        "p50": 23330.7,
+        "p95": 44573.3,
+        "p99": 44577.7
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact",
+      "config": {
+        "workers": 8,
+        "num_requests": 20
+      },
+      "text_breakdown": {
+        "short_cn_count": 5,
+        "short_en_count": 5,
+        "medium_teams_count": 5,
+        "long_count": 5
+      },
+      "wall_time_s": 111.68,
+      "total_requests": 20,
+      "successful_requests": 20,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "qps": 0.18,
+      "latency_ms": {
+        "min": 3815.3,
+        "max": 44792.0,
+        "avg": 34198.5,
+        "p50": 40402.0,
+        "p95": 44770.5,
+        "p99": 44787.7
+      },
+      "status_code_distribution": {
+        "200": 20
+      }
+    }
+  ],
+  "batch": [
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 1,
+        "num_requests": 10,
+        "batch_size": 1
+      },
+      "wall_time_s": 5.965,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 1.68,
+      "equivalent_text_qps": 1.68,
+      "total_texts_processed": 10,
+      "latency_ms": {
+        "min": 460.8,
+        "max": 750.9,
+        "avg": 596.4,
+        "p50": 609.0,
+        "p95": 727.4,
+        "p99": 746.2
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 460.8,
+        "max": 750.9,
+        "avg": 596.4,
+        "p50": 609.0,
+        "p95": 727.4,
+        "p99": 746.2
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 1,
+        "num_requests": 10,
+        "batch_size": 5
+      },
+      "wall_time_s": 30.569,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 0.33,
+      "equivalent_text_qps": 1.64,
+      "total_texts_processed": 50,
+      "latency_ms": {
+        "min": 2705.8,
+        "max": 4379.8,
+        "avg": 3056.7,
+        "p50": 2946.3,
+        "p95": 3790.9,
+        "p99": 4262.0
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 541.2,
+        "max": 876.0,
+        "avg": 611.3,
+        "p50": 589.3,
+        "p95": 758.2,
+        "p99": 852.4
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 1,
+        "num_requests": 10,
+        "batch_size": 10
+      },
+      "wall_time_s": 57.964,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 0.17,
+      "equivalent_text_qps": 1.73,
+      "total_texts_processed": 100,
+      "latency_ms": {
+        "min": 5647.6,
+        "max": 6078.1,
+        "avg": 5796.3,
+        "p50": 5750.8,
+        "p95": 6032.2,
+        "p99": 6068.9
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 564.8,
+        "max": 607.8,
+        "avg": 579.6,
+        "p50": 575.1,
+        "p95": 603.2,
+        "p99": 606.9
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 2,
+        "num_requests": 10,
+        "batch_size": 1
+      },
+      "wall_time_s": 5.96,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 1.68,
+      "equivalent_text_qps": 1.68,
+      "total_texts_processed": 10,
+      "latency_ms": {
+        "min": 622.1,
+        "max": 1318.5,
+        "avg": 1117.2,
+        "p50": 1181.2,
+        "p95": 1313.6,
+        "p99": 1317.5
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 622.1,
+        "max": 1318.5,
+        "avg": 1117.2,
+        "p50": 1181.2,
+        "p95": 1313.6,
+        "p99": 1317.5
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 2,
+        "num_requests": 10,
+        "batch_size": 5
+      },
+      "wall_time_s": 28.739,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 0.35,
+      "equivalent_text_qps": 1.74,
+      "total_texts_processed": 50,
+      "latency_ms": {
+        "min": 2854.1,
+        "max": 5935.7,
+        "avg": 5446.1,
+        "p50": 5721.0,
+        "p95": 5892.5,
+        "p99": 5927.0
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 570.8,
+        "max": 1187.1,
+        "avg": 1089.2,
+        "p50": 1144.2,
+        "p95": 1178.5,
+        "p99": 1185.4
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 2,
+        "num_requests": 10,
+        "batch_size": 10
+      },
+      "wall_time_s": 57.723,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 0.17,
+      "equivalent_text_qps": 1.73,
+      "total_texts_processed": 100,
+      "latency_ms": {
+        "min": 5644.8,
+        "max": 11742.2,
+        "avg": 10970.7,
+        "p50": 11540.7,
+        "p95": 11717.8,
+        "p99": 11737.3
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 564.5,
+        "max": 1174.2,
+        "avg": 1097.1,
+        "p50": 1154.1,
+        "p95": 1171.8,
+        "p99": 1173.7
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 4,
+        "num_requests": 10,
+        "batch_size": 1
+      },
+      "wall_time_s": 5.961,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 1.68,
+      "equivalent_text_qps": 1.68,
+      "total_texts_processed": 10,
+      "latency_ms": {
+        "min": 504.1,
+        "max": 2611.7,
+        "avg": 2023.4,
+        "p50": 2262.4,
+        "p95": 2564.6,
+        "p99": 2602.3
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 504.1,
+        "max": 2611.7,
+        "avg": 2023.4,
+        "p50": 2262.4,
+        "p95": 2564.6,
+        "p99": 2602.3
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 4,
+        "num_requests": 10,
+        "batch_size": 5
+      },
+      "wall_time_s": 28.994,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 0.34,
+      "equivalent_text_qps": 1.72,
+      "total_texts_processed": 50,
+      "latency_ms": {
+        "min": 3200.6,
+        "max": 11746.1,
+        "avg": 9860.1,
+        "p50": 11432.0,
+        "p95": 11683.1,
+        "p99": 11733.5
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 640.1,
+        "max": 2349.2,
+        "avg": 1972.0,
+        "p50": 2286.4,
+        "p95": 2336.6,
+        "p99": 2346.7
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 4,
+        "num_requests": 10,
+        "batch_size": 10
+      },
+      "wall_time_s": 57.559,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 0.17,
+      "equivalent_text_qps": 1.74,
+      "total_texts_processed": 100,
+      "latency_ms": {
+        "min": 5797.1,
+        "max": 23132.5,
+        "avg": 19590.5,
+        "p50": 23009.3,
+        "p95": 23104.7,
+        "p99": 23126.9
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 579.7,
+        "max": 2313.2,
+        "avg": 1959.1,
+        "p50": 2300.9,
+        "p95": 2310.5,
+        "p99": 2312.7
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 8,
+        "num_requests": 10,
+        "batch_size": 1
+      },
+      "wall_time_s": 6.026,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 1.66,
+      "equivalent_text_qps": 1.66,
+      "total_texts_processed": 10,
+      "latency_ms": {
+        "min": 506.5,
+        "max": 4831.0,
+        "avg": 3130.7,
+        "p50": 3367.6,
+        "p95": 4829.7,
+        "p99": 4830.8
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 506.5,
+        "max": 4831.0,
+        "avg": 3130.7,
+        "p50": 3367.6,
+        "p95": 4829.7,
+        "p99": 4830.8
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 8,
+        "num_requests": 10,
+        "batch_size": 5
+      },
+      "wall_time_s": 29.108,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 0.34,
+      "equivalent_text_qps": 1.72,
+      "total_texts_processed": 50,
+      "latency_ms": {
+        "min": 2875.0,
+        "max": 23378.4,
+        "avg": 15219.2,
+        "p50": 16262.0,
+        "p95": 23307.4,
+        "p99": 23364.2
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 575.0,
+        "max": 4675.7,
+        "avg": 3043.8,
+        "p50": 3252.4,
+        "p95": 4661.5,
+        "p99": 4672.8
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    },
+    {
+      "endpoint": "/api/v1/redact/batch",
+      "config": {
+        "workers": 8,
+        "num_requests": 10,
+        "batch_size": 10
+      },
+      "wall_time_s": 57.673,
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "success_rate": 1.0,
+      "batch_qps": 0.17,
+      "equivalent_text_qps": 1.73,
+      "total_texts_processed": 100,
+      "latency_ms": {
+        "min": 5895.5,
+        "max": 46139.1,
+        "avg": 29982.8,
+        "p50": 31624.8,
+        "p95": 46127.3,
+        "p99": 46136.7
+      },
+      "per_text_latency_estimate_ms": {
+        "min": 589.5,
+        "max": 4613.9,
+        "avg": 2998.3,
+        "p50": 3162.5,
+        "p95": 4612.7,
+        "p99": 4613.7
+      },
+      "status_code_distribution": {
+        "200": 10
+      }
+    }
+  ]
+}

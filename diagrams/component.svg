@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 1320" width="1900" height="1320" font-family="Microsoft JhengHei, PingFang TC, sans-serif">
+  <defs>
+    <marker id="arrowS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B45309"/>
+    </marker>
+    <marker id="arrowD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0E7490"/>
+    </marker>
+    <marker id="arrowN" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1900" height="1320" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="950" y="40" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">系統元件架構圖 (Component Diagram)</text>
+  <text x="950" y="68" text-anchor="middle" font-size="15" fill="#374151">事後批次處理 · 雙系統分離 · 去識別化於 A/B 交接點</text>
+
+  <!-- Trust boundary (vertical dashed line splitting external left vs internal right is replaced by horizontal band approach) -->
+  <!-- We use two large regions: External (top band + right LLM zone) and Internal (middle band) -->
+
+  <!-- External Region: Top band (Teams + Graph API) -->
+  <rect x="40" y="100" width="1820" height="170" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="6 4" rx="10"/>
+  <text x="60" y="128" font-size="15" font-weight="bold" fill="#4B5563">外部服務區 (External Services) — 組織信任邊界外</text>
+
+  <!-- Microsoft Teams -->
+  <rect x="80" y="150" width="260" height="100" fill="#FFFFFF" stroke="#374151" stroke-width="2" rx="8"/>
+  <text x="210" y="185" text-anchor="middle" font-size="16" font-weight="bold" fill="#111827">Microsoft Teams 平台</text>
+  <text x="210" y="210" text-anchor="middle" font-size="13" fill="#374151">資料源:聊天訊息、頻道、附件</text>
+  <text x="210" y="232" text-anchor="middle" font-size="12" fill="#6B7280">(企業協作環境)</text>
+
+  <!-- Graph API -->
+  <rect x="420" y="150" width="320" height="100" fill="#FFFFFF" stroke="#374151" stroke-width="2" rx="8"/>
+  <text x="580" y="183" text-anchor="middle" font-size="16" font-weight="bold" fill="#111827">Microsoft Graph API</text>
+  <text x="580" y="206" text-anchor="middle" font-size="12" fill="#374151">/chats/{id}/messages</text>
+  <text x="580" y="226" text-anchor="middle" font-size="12" fill="#374151">pagination · throttling (1 req/sec)</text>
+
+  <!-- Arrow Teams → Graph API -->
+  <line x1="340" y1="200" x2="420" y2="200" stroke="#374151" stroke-width="2" marker-end="url(#arrowN)"/>
+
+  <!-- External LLM -->
+  <rect x="1480" y="150" width="340" height="100" fill="#FFFFFF" stroke="#374151" stroke-width="2" rx="8"/>
+  <text x="1650" y="183" text-anchor="middle" font-size="16" font-weight="bold" fill="#111827">外部 LLM 服務</text>
+  <text x="1650" y="206" text-anchor="middle" font-size="12" fill="#374151">OpenAI API / Google Gemini</text>
+  <text x="1650" y="226" text-anchor="middle" font-size="12" fill="#374151">(分析引擎,僅接收去識別化資料)</text>
+
+  <!-- Trust boundary horizontal -->
+  <line x1="40" y1="290" x2="1860" y2="290" stroke="#DC2626" stroke-width="2.5" stroke-dasharray="10 6"/>
+  <text x="50" y="284" font-size="13" font-weight="bold" fill="#DC2626">═══ 組織內部信任邊界 (Trust Boundary) ═══</text>
+
+  <!-- Internal Region -->
+  <rect x="40" y="310" width="1820" height="980" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.5" rx="10" opacity="0.55"/>
+  <text x="60" y="338" font-size="15" font-weight="bold" fill="#1E3A8A">組織內部 (Internal — 信任邊界內)</text>
+
+  <!-- Scheduler -->
+  <rect x="80" y="370" width="220" height="100" fill="#FEF3C7" stroke="#B45309" stroke-width="2" rx="8"/>
+  <text x="190" y="403" text-anchor="middle" font-size="16" font-weight="bold" fill="#111827">Scheduler</text>
+  <text x="190" y="426" text-anchor="middle" font-size="12" fill="#374151">Cron: 0 0 * * *</text>
+  <text x="190" y="448" text-anchor="middle" font-size="12" fill="#374151">每日午夜觸發批次</text>
+
+  <!-- System A container -->
+  <rect x="350" y="370" width="700" height="430" fill="#FEE2E2" stroke="#B45309" stroke-width="2.5" rx="10"/>
+  <text x="370" y="398" font-size="17" font-weight="bold" fill="#7F1D1D">System A — 內部資料層 (Sensitive Zone)</text>
+  <text x="370" y="418" font-size="12" fill="#7F1D1D">含真實身分資料,僅授權人員可調閱</text>
+
+  <!-- Data Collection Service -->
+  <rect x="380" y="440" width="300" height="90" fill="#FFFFFF" stroke="#B45309" stroke-width="1.5" rx="6"/>
+  <text x="530" y="470" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">資料收集服務</text>
+  <text x="530" y="492" text-anchor="middle" font-size="12" fill="#374151">Graph API 客戶端</text>
+  <text x="530" y="512" text-anchor="middle" font-size="12" fill="#374151">分頁、限流、錯誤重試</text>
+
+  <!-- Internal Database -->
+  <ellipse cx="530" cy="610" rx="155" ry="48" fill="#FFFFFF" stroke="#B45309" stroke-width="1.5"/>
+  <text x="530" y="600" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">內部資料庫</text>
+  <text x="530" y="622" text-anchor="middle" font-size="12" fill="#374151">原始對話 (含 PII)</text>
+  <text x="530" y="640" text-anchor="middle" font-size="12" fill="#374151">完整可追溯</text>
+
+  <!-- Mapping Table -->
+  <rect x="730" y="440" width="300" height="90" fill="#FFFFFF" stroke="#B45309" stroke-width="1.5" rx="6"/>
+  <text x="880" y="470" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">動態代號對照表</text>
+  <text x="880" y="492" text-anchor="middle" font-size="12" fill="#374151">同批次固定 / 跨批次重編</text>
+  <text x="880" y="512" text-anchor="middle" font-size="12" fill="#374151">A=張三 (T1) → A=李四 (T2)</text>
+
+  <!-- Mapping Table store -->
+  <ellipse cx="880" cy="610" rx="155" ry="48" fill="#FFFFFF" stroke="#B45309" stroke-width="1.5"/>
+  <text x="880" y="600" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">對照表存放</text>
+  <text x="880" y="622" text-anchor="middle" font-size="12" fill="#374151">(僅 System A 內部存取)</text>
+  <text x="880" y="640" text-anchor="middle" font-size="12" fill="#374151">RBAC 隔離</text>
+
+  <!-- A internal arrows -->
+  <line x1="530" y1="530" x2="530" y2="562" stroke="#B45309" stroke-width="1.5" marker-end="url(#arrowS)"/>
+  <line x1="880" y1="530" x2="880" y2="562" stroke="#B45309" stroke-width="1.5" marker-end="url(#arrowS)"/>
+  <line x1="680" y1="485" x2="730" y2="485" stroke="#B45309" stroke-width="1.5" marker-end="url(#arrowS)"/>
+
+  <!-- Note inside A -->
+  <text x="700" y="700" text-anchor="middle" font-size="12" fill="#7F1D1D" font-style="italic">敏感資料(紅色實線) 永不離開 System A</text>
+  <text x="700" y="720" text-anchor="middle" font-size="12" fill="#7F1D1D" font-style="italic">代號重編於每批次開始時執行</text>
+  <text x="700" y="765" text-anchor="middle" font-size="12" fill="#374151">輸出至去識別化模組 ↓</text>
+
+  <!-- Deidentification Module (boundary layer) -->
+  <rect x="350" y="830" width="700" height="120" fill="#FDF4FF" stroke="#7E22CE" stroke-width="3" rx="10" stroke-dasharray="0"/>
+  <text x="700" y="862" text-anchor="middle" font-size="17" font-weight="bold" fill="#581C87">去識別化模組 (A/B 交接層)</text>
+  <text x="700" y="888" text-anchor="middle" font-size="13" fill="#374151">(1) 代號替換 (依當批對照表) · (2) 殘留個資掃描 (姓名/email/手機/工號)</text>
+  <text x="700" y="910" text-anchor="middle" font-size="13" fill="#374151">(3) 確認無 PII 殘留 → 轉交 System B</text>
+  <text x="700" y="935" text-anchor="middle" font-size="12" fill="#581C87" font-style="italic">隱私保護式分析機制 · 不得提早或延後</text>
+
+  <!-- Arrow from A to deid -->
+  <line x1="700" y1="800" x2="700" y2="830" stroke="#B45309" stroke-width="2.2" marker-end="url(#arrowS)"/>
+
+  <!-- System B container -->
+  <rect x="1090" y="370" width="730" height="580" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="2.5" rx="10"/>
+  <text x="1110" y="398" font-size="17" font-weight="bold" fill="#1E3A8A">System B — 對外分析層 (De-identified Zone)</text>
+  <text x="1110" y="418" font-size="12" fill="#1E3A8A">僅處理代號化資料,可對外呼叫 LLM</text>
+
+  <!-- Analysis Orchestrator -->
+  <rect x="1120" y="440" width="320" height="100" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="1.5" rx="6"/>
+  <text x="1280" y="475" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">分析編排服務</text>
+  <text x="1280" y="497" text-anchor="middle" font-size="12" fill="#374151">Prompt 組裝 · 速率控制</text>
+  <text x="1280" y="518" text-anchor="middle" font-size="12" fill="#374151">結果解析 · 事件去重</text>
+
+  <!-- LLM Connector -->
+  <rect x="1480" y="440" width="320" height="100" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="1.5" rx="6"/>
+  <text x="1640" y="475" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">外部 LLM 接口</text>
+  <text x="1640" y="497" text-anchor="middle" font-size="12" fill="#374151">API Key 管理 · 重試 · 失敗降級</text>
+  <text x="1640" y="518" text-anchor="middle" font-size="12" fill="#374151">送出僅含代號之對話片段</text>
+
+  <!-- Result DB -->
+  <ellipse cx="1280" cy="640" rx="160" ry="50" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="1280" y="630" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">分析結果資料庫</text>
+  <text x="1280" y="652" text-anchor="middle" font-size="12" fill="#374151">代號化標註 · 風險分數</text>
+  <text x="1280" y="672" text-anchor="middle" font-size="12" fill="#374151">事件 ID 對應原訊息 ID</text>
+
+  <!-- Arrows in B -->
+  <line x1="1440" y1="490" x2="1480" y2="490" stroke="#0E7490" stroke-width="2" marker-end="url(#arrowD)"/>
+  <line x1="1280" y1="540" x2="1280" y2="590" stroke="#0E7490" stroke-width="2" marker-end="url(#arrowD)"/>
+
+  <!-- Deid → System B -->
+  <path d="M 1050 890 Q 1080 890 1090 720" fill="none" stroke="#0E7490" stroke-width="2.5" marker-end="url(#arrowD)"/>
+  <text x="1070" y="800" font-size="12" fill="#0E7490" font-weight="bold">純代號 JSON</text>
+
+  <!-- LLM connector to External LLM (crosses boundary) -->
+  <path d="M 1640 440 Q 1640 320 1650 250" fill="none" stroke="#0E7490" stroke-width="2.2" stroke-dasharray="5 3" marker-end="url(#arrowD)"/>
+  <text x="1660" y="320" font-size="12" fill="#0E7490" font-weight="bold">去識別化請求</text>
+  <text x="1660" y="338" font-size="12" fill="#0E7490">(跨信任邊界)</text>
+
+  <!-- Graph API → System A (crosses boundary) -->
+  <path d="M 580 250 Q 580 290 530 440" fill="none" stroke="#B45309" stroke-width="2.2" stroke-dasharray="5 3" marker-end="url(#arrowS)"/>
+  <text x="430" y="320" font-size="12" fill="#B45309" font-weight="bold">原始對話 (敏感)</text>
+
+  <!-- Scheduler trigger A -->
+  <line x1="300" y1="420" x2="380" y2="475" stroke="#374151" stroke-width="2" marker-end="url(#arrowN)"/>
+  <text x="306" y="455" font-size="12" fill="#374151">觸發批次</text>
+
+  <!-- Bottom row: Dashboard + Auth Reversal -->
+  <rect x="350" y="990" width="500" height="170" fill="#ECFDF5" stroke="#047857" stroke-width="2" rx="8"/>
+  <text x="600" y="1020" text-anchor="middle" font-size="16" font-weight="bold" fill="#064E3B">管理後台 (前端)</text>
+  <text x="600" y="1048" text-anchor="middle" font-size="13" fill="#374151">· 宏觀風險儀表板 (熱力圖 / 時序統計)</text>
+  <text x="600" y="1070" text-anchor="middle" font-size="13" fill="#374151">· 單一事件脈絡還原頁面</text>
+  <text x="600" y="1092" text-anchor="middle" font-size="13" fill="#374151">· 警示通知列表</text>
+  <text x="600" y="1118" text-anchor="middle" font-size="12" fill="#064E3B" font-style="italic">不設高風險帳號排名功能</text>
+  <text x="600" y="1138" text-anchor="middle" font-size="12" fill="#064E3B" font-style="italic">(避免員工反彈、降低監控感)</text>
+
+  <rect x="900" y="990" width="500" height="170" fill="#FFF7ED" stroke="#C2410C" stroke-width="2" rx="8"/>
+  <text x="1150" y="1020" text-anchor="middle" font-size="16" font-weight="bold" fill="#7C2D12">授權還原模組</text>
+  <text x="1150" y="1048" text-anchor="middle" font-size="13" fill="#374151">· RBAC 權限驗證 (僅授權角色)</text>
+  <text x="1150" y="1070" text-anchor="middle" font-size="13" fill="#374151">· 對照表查詢 (透過 System A 內部 API)</text>
+  <text x="1150" y="1092" text-anchor="middle" font-size="13" fill="#374151">· 雙因子驗證 + 稽核日誌</text>
+  <text x="1150" y="1118" text-anchor="middle" font-size="12" fill="#7C2D12" font-style="italic">所有調閱不可逆地寫入稽核紀錄</text>
+  <text x="1150" y="1138" text-anchor="middle" font-size="12" fill="#7C2D12" font-style="italic">違規調閱可後續追溯</text>
+
+  <!-- Arrows: Result DB → Dashboard -->
+  <path d="M 1180 690 Q 900 800 700 990" fill="none" stroke="#0E7490" stroke-width="2" marker-end="url(#arrowD)"/>
+  <text x="850" y="850" font-size="12" fill="#0E7490" font-weight="bold">推播警示 (代號化)</text>
+
+  <!-- Arrows: Dashboard → Auth Reversal -->
+  <line x1="850" y1="1075" x2="900" y2="1075" stroke="#374151" stroke-width="2" marker-end="url(#arrowN)"/>
+  <text x="838" y="1062" font-size="12" fill="#374151">申請</text>
+
+  <!-- Auth → System A (crosses dashed boundary into A) -->
+  <path d="M 1150 990 Q 1150 850 1035 700" fill="none" stroke="#B45309" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrowS)"/>
+  <text x="1130" y="900" font-size="12" fill="#B45309" font-weight="bold">查對照表</text>
+  <text x="1118" y="918" font-size="12" fill="#B45309">(僅授權)</text>
+
+  <!-- Authorized personnel -->
+  <rect x="1450" y="990" width="370" height="170" fill="#F5F3FF" stroke="#5B21B6" stroke-width="2" rx="8"/>
+  <text x="1635" y="1020" text-anchor="middle" font-size="16" font-weight="bold" fill="#3B0764">授權人員</text>
+  <text x="1635" y="1050" text-anchor="middle" font-size="13" fill="#374151">資安/法遵代表</text>
+  <text x="1635" y="1075" text-anchor="middle" font-size="13" fill="#374151">經事前審批之角色</text>
+  <text x="1635" y="1108" text-anchor="middle" font-size="12" fill="#3B0764" font-style="italic">使用管理後台 → 對警示</text>
+  <text x="1635" y="1126" text-anchor="middle" font-size="12" fill="#3B0764" font-style="italic">事件發起還原申請</text>
+
+  <!-- Auth personnel ↔ Dashboard, Auth personnel ↔ Reversal -->
+  <line x1="1450" y1="1060" x2="1400" y2="1075" stroke="#374151" stroke-width="2" marker-end="url(#arrowN)" marker-start="url(#arrowN)"/>
+
+  <!-- Legend -->
+  <rect x="40" y="1190" width="1820" height="110" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1" rx="6"/>
+  <text x="60" y="1218" font-size="14" font-weight="bold" fill="#111827">圖例 (Legend)</text>
+
+  <line x1="60" y1="1240" x2="120" y2="1240" stroke="#B45309" stroke-width="2.2" marker-end="url(#arrowS)"/>
+  <text x="130" y="1244" font-size="13" fill="#374151">敏感資料流 (含 PII,僅 System A 內流動)</text>
+
+  <line x1="460" y1="1240" x2="520" y2="1240" stroke="#0E7490" stroke-width="2.2" marker-end="url(#arrowD)"/>
+  <text x="530" y="1244" font-size="13" fill="#374151">去識別化資料流 (純代號,可進入 System B)</text>
+
+  <line x1="900" y1="1240" x2="960" y2="1240" stroke="#374151" stroke-width="2" marker-end="url(#arrowN)"/>
+  <text x="970" y="1244" font-size="13" fill="#374151">控制流 / 授權操作</text>
+
+  <line x1="1180" y1="1240" x2="1240" y2="1240" stroke="#DC2626" stroke-width="2.5" stroke-dasharray="10 6"/>
+  <text x="1250" y="1244" font-size="13" fill="#374151">組織信任邊界</text>
+
+  <rect x="60" y="1262" width="20" height="14" fill="#FEE2E2" stroke="#B45309"/>
+  <text x="86" y="1274" font-size="13" fill="#374151">System A (敏感區)</text>
+
+  <rect x="240" y="1262" width="20" height="14" fill="#DBEAFE" stroke="#1D4ED8"/>
+  <text x="266" y="1274" font-size="13" fill="#374151">System B (去識別化區)</text>
+
+  <rect x="430" y="1262" width="20" height="14" fill="#FDF4FF" stroke="#7E22CE"/>
+  <text x="456" y="1274" font-size="13" fill="#374151">A/B 交接層 (去識別化模組)</text>
+
+  <rect x="700" y="1262" width="20" height="14" fill="#ECFDF5" stroke="#047857"/>
+  <text x="726" y="1274" font-size="13" fill="#374151">前端</text>
+
+  <rect x="800" y="1262" width="20" height="14" fill="#FFF7ED" stroke="#C2410C"/>
+  <text x="826" y="1274" font-size="13" fill="#374151">授權還原</text>
+
+  <rect x="930" y="1262" width="20" height="14" fill="#F3F4F6" stroke="#9CA3AF"/>
+  <text x="956" y="1274" font-size="13" fill="#374151">外部服務</text>
+</svg>
